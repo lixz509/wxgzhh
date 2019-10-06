@@ -21,7 +21,7 @@ public class MessageReceiverController {
             return echostr;
         }else {
             //失败则error
-            return "error";
+            return echostr;
         }
     }
 
