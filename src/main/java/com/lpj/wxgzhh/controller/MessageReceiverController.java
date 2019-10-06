@@ -16,13 +16,7 @@ public class MessageReceiverController {
             String nonce,
             String echostr
     ){
-        if(WxgzhhService.chexk(signature,timestamp,nonce)){
-            //成功则返回微信要求的参数
-            return echostr;
-        }else {
-            //失败则error
-            return echostr;
-        }
+        return echostr;
     }
 
 }
