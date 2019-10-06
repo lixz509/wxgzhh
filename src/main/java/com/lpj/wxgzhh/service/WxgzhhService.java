@@ -1,13 +1,16 @@
 package com.lpj.wxgzhh.service;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+
+
+import org.springframework.stereotype.Service;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
-@Autowired
+@Service
 public class WxgzhhService {
 
     private static final String TOKEN="lpj";
