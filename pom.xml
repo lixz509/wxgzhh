@@ -11,8 +11,8 @@
 	<groupId>com.lpj</groupId>
 	<artifactId>wxgzhh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>微信公众号</name>
-	<description>微信公众号</description>
+	<name>wxgzhh</name>
+	<description>wxgzhh</description>
 
 	<properties>
 		<java.version>11</java.version>
