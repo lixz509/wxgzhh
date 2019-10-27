@@ -52,6 +52,8 @@ public class MessageConvertController {
         Map<String,String> xmlMap=MRS.parseXml(isXML);
         LOG.trace("解析后：\n{}\n",xmlMap);
 
+        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
+
         InMessage inMessage=MRS.XMLStringToBean(xml);
 
         LOG.trace("转换为对象：\n{}\n",inMessage);

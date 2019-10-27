@@ -22,7 +22,7 @@ import java.util.Map;
 @Service
 public class MessageAnalysisService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MessageConvertController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MessageAnalysisService.class);
 
     @Autowired
     private MessageAnalysisService MRS;
