@@ -36,7 +36,7 @@ public class MessageConvertController {
             @RequestParam("nonce") String nonce,
             @RequestParam("echostr") String echostr
     ){
-        return "success";
+        return echostr;
     }
 
     @PostMapping
