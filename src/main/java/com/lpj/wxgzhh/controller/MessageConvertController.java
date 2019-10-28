@@ -78,7 +78,7 @@ public class MessageConvertController {
                 "  <Content><![CDATA[你好]]></Content>\n" +
                 "</xml>";
 
-        return hf;
+        return "success";
     }
 
 }
