@@ -70,7 +70,15 @@ public class MessageConvertController {
 
         inMessageTemplate.convertAndSend(channel, inMessage);
 
-        return "success";
+        String hf="<xml>\n" +
+                "  <ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>\n" +
+                "  <FromUserName><![CDATA["+inMessage.getToUserName()+"]]></FromUserName>\n" +
+                "  <CreateTime>12345678</CreateTime>\n" +
+                "  <MsgType><![CDATA[text]]></MsgType>\n" +
+                "  <Content><![CDATA[你好]]></Content>\n" +
+                "</xml>";
+
+        return hf;
     }
 
 }
