@@ -50,30 +50,32 @@ public class MessageConvertController {
             HttpServletResponse response,
             HttpServletRequest request,
             @RequestBody  String xml) throws JAXBException, IOException, ClassNotFoundException {
-        LOG.trace("收到的消息原文：\n{}\n",xml);
-
-        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
-
-        Map<String,String> xmlMap=MRS.parseXml(isXML);
-        LOG.trace("解析后：\n{}\n",xmlMap);
-
-        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
-
-        InMessage inMessage=MRS.XMLStringToBean(xml);
-
-        LOG.trace("转换为对象：\n{}\n",inMessage);
-
-        byte[] bytes=MRS.serialize(xml);
-
-        LOG.trace("解析为后的字节数组"+bytes);
-
-        InMessage im=MRS.toInmaesage(bytes);
-
-        LOG.trace("反序列化的对象"+im);
-
-
-
-
+//        LOG.trace("收到的消息原文：\n{}\n",xml);
+//
+//        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
+//
+//        Map<String,String> xmlMap=MRS.parseXml(isXML);
+//        LOG.trace("解析后：\n{}\n",xmlMap);
+//
+//        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
+//
+//        InMessage inMessage=MRS.XMLStringToBean(xml);
+//
+//        LOG.trace("转换为对象：\n{}\n",inMessage);
+//
+//        byte[] bytes=MRS.serialize(xml);
+//
+//        LOG.trace("解析为后的字节数组"+bytes);
+//
+//        InMessage im=MRS.toInmaesage(bytes);
+//
+//        LOG.trace("反序列化的对象"+im);
+//
+//        String channel = "wxgzhh";
+//
+//        inMessageTemplate.convertAndSend(channel, inMessage);
+//
+//        LOG.trace("发回的响应0：\n{}\n",channel);
 
         String hf="<xml>" +
                 "<ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>" +
@@ -99,13 +101,6 @@ public class MessageConvertController {
         LOG.trace("发回的响应：\n{}\n",response);
 
         LOG.trace("反序列化的对象2"+im);
-
-
-
-        String channel = "wxgzhh";
-
-        inMessageTemplate.convertAndSend(channel, inMessage);
-        LOG.trace("发回的响应0：\n{}\n",channel);
         return hf;
     }
 
