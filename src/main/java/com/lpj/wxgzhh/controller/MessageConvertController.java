@@ -50,32 +50,32 @@ public class MessageConvertController {
             HttpServletResponse response,
             HttpServletRequest request,
             @RequestBody  String xml) throws JAXBException, IOException, ClassNotFoundException {
-//        LOG.trace("收到的消息原文：\n{}\n",xml);
-//
-//        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
-//
-//        Map<String,String> xmlMap=MRS.parseXml(isXML);
-//        LOG.trace("解析后：\n{}\n",xmlMap);
-//
-//        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
-//
+        LOG.trace("收到的消息原文：\n{}\n",xml);
+
+        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
+
+        Map<String,String> xmlMap=MRS.parseXml(isXML);
+        LOG.trace("解析后：\n{}\n",xmlMap);
+
+        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
+
         InMessage inMessage=MRS.XMLStringToBean(xml);
-//
-//        LOG.trace("转换为对象：\n{}\n",inMessage);
-//
-//        byte[] bytes=MRS.serialize(xml);
-//
-//        LOG.trace("解析为后的字节数组"+bytes);
-//
-//        InMessage im=MRS.toInmaesage(bytes);
-//
-//        LOG.trace("反序列化的对象"+im);
-//
-//        String channel = "wxgzhh";
-//
-//        inMessageTemplate.convertAndSend(channel, inMessage);
-//
-//        LOG.trace("发回的响应0：\n{}\n",channel);
+
+        LOG.trace("转换为对象：\n{}\n",inMessage);
+
+        byte[] bytes=MRS.serialize(xml);
+
+        LOG.trace("解析为后的字节数组"+bytes);
+
+        InMessage im=MRS.toInmaesage(bytes);
+
+        LOG.trace("反序列化的对象"+im);
+
+        String channel = "wxgzhh";
+
+        inMessageTemplate.convertAndSend(channel, inMessage);
+
+        LOG.trace("发回的响应0：\n{}\n",channel);
 
         String hf="<xml>" +
                 "<ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>" +
@@ -88,15 +88,10 @@ public class MessageConvertController {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         LOG.trace("发回的响应2：\n{}\n",hf);
-//        OutputStream out=response.getOutputStream();
         OutputStreamWriter out = new OutputStreamWriter(response
                 .getOutputStream(), "UTF-8");
-//        out.print(hf);-
-        LOG.trace("发回的响应3：\n{}\n",hf);
         out.flush();
-        LOG.trace("发回的响应4：\n{}\n",hf);
         out.write(hf);
-        LOG.trace("发回的响应5：\n{}\n",hf);
         out.close();
         LOG.trace("发回的响应：\n{}\n",response);
 
