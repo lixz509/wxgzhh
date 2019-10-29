@@ -95,6 +95,8 @@ public class MessageConvertController {
         out.write(hf);
         out.close();
         LOG.trace("发回的响应：\n{}\n",response);
+
+        LOG.trace("反序列化的对象2"+im);
         return hf;
     }
 
