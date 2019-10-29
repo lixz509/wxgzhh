@@ -13,24 +13,11 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.http.HttpRequest;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
 import java.util.Map;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpRequest.BodyPublishers;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
-import java.nio.charset.Charset;
-
 
 @RestController
 @RequestMapping("/wxgzhh/message/receiver")
@@ -44,9 +31,6 @@ public class MessageConvertController {
     @Autowired
     private RedisTemplate<String,InMessage> inMessageTemplate;
 
-    //测试
-    ObjectMapper objectMapper = new ObjectMapper();
-    private HttpClient httpClient = HttpClient.newBuilder().build();
 
     @GetMapping
     public String echo(
@@ -63,6 +47,8 @@ public class MessageConvertController {
             @RequestParam("signature") String signature,
             @RequestParam("timestamp") String timestamp,
             @RequestParam("nonce") String nonce,
+            HttpServletResponse response,
+            HttpServletRequest request,
             @RequestBody  String xml) throws JAXBException, IOException, ClassNotFoundException {
         LOG.trace("收到的消息原文：\n{}\n",xml);
 
@@ -89,32 +75,26 @@ public class MessageConvertController {
 
         inMessageTemplate.convertAndSend(channel, inMessage);
 
-        String hf="<xml>\n" +
-                "  <ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>\n" +
-                "  <FromUserName><![CDATA["+inMessage.getToUserName()+"]]></FromUserName>\n" +
-                "  <CreateTime>12345678</CreateTime>\n" +
-                "  <MsgType><![CDATA[text]]></MsgType>\n" +
-                "  <Content><![CDATA[你好]]></Content>\n" +
+        String hf="<xml>" +
+                "<ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>" +
+                "<FromUserName><![CDATA["+inMessage.getToUserName()+"]]></FromUserName>" +
+                "<CreateTime>12345678</CreateTime>" +
+                "<MsgType><![CDATA[text]]></MsgType>" +
+                "<Content><![CDATA[你好]]></Content>" +
                 "</xml>";
 
+        response.reset();
 
-        //测试回复消息
-
-        String openId=inMessage.getFromUserName();
-
-        String url="https://api.weixin.qq.com/customservice/kfaccount/add?access_token=lpj";
-
-        String text="655";
-
-        OutMessage out = new OutMessage(openId, text);
-
-        String json = this.objectMapper.writeValueAsString(out);
-
-        HttpRequest request = HttpRequest.newBuilder(URI.create(url))//
-                // 以POST方式发送请求
-                .POST(BodyPublishers.ofString(json, StandardCharsets.UTF_8))//
-                .build();
-
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+//        OutputStream out=response.getOutputStream();
+        OutputStreamWriter out = new OutputStreamWriter(response
+                .getOutputStream(), "UTF-8");
+//        out.print(hf);
+        out.flush();
+        out.write(hf);
+        out.close();
+        LOG.trace("发回的响应：\n{}\n",response);
         return "success";
     }
 
