@@ -71,11 +71,9 @@ public class MessageConvertController {
 
         LOG.trace("反序列化的对象"+im);
 
-        String channel = "wxgzhh";
 
-        inMessageTemplate.convertAndSend(channel, inMessage);
 
-        LOG.trace("发回的响应0：\n{}\n",channel);
+
 
         String hf="<xml>" +
                 "<ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>" +
@@ -101,6 +99,13 @@ public class MessageConvertController {
         LOG.trace("发回的响应：\n{}\n",response);
 
         LOG.trace("反序列化的对象2"+im);
+
+
+
+        String channel = "wxgzhh";
+
+        inMessageTemplate.convertAndSend(channel, inMessage);
+        LOG.trace("发回的响应0：\n{}\n",channel);
         return hf;
     }
 
