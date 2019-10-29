@@ -80,7 +80,7 @@ public class MessageConvertController {
                 "<FromUserName><![CDATA["+inMessage.getToUserName()+"]]></FromUserName>" +
                 "<CreateTime>12345678</CreateTime>" +
                 "<MsgType><![CDATA[text]]></MsgType>" +
-                "<Content><![CDATA[你好]]></Content>" +
+                "<Content><![CDATA["+inMessage.getContent()+"]]></Content>" +
                 "</xml>";
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
