@@ -95,7 +95,7 @@ public class MessageConvertController {
         out.write(hf);
         out.close();
         LOG.trace("发回的响应：\n{}\n",response);
-        return "success";
+        return hf;
     }
 
 }
