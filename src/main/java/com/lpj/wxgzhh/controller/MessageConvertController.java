@@ -82,17 +82,19 @@ public class MessageConvertController {
                 "<MsgType><![CDATA[text]]></MsgType>" +
                 "<Content><![CDATA[你好]]></Content>" +
                 "</xml>";
-
-        response.reset();
-
+        LOG.trace("发回的响应1：\n{}\n",hf);
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
+        LOG.trace("发回的响应2：\n{}\n",hf);
 //        OutputStream out=response.getOutputStream();
         OutputStreamWriter out = new OutputStreamWriter(response
                 .getOutputStream(), "UTF-8");
 //        out.print(hf);
+        LOG.trace("发回的响应3：\n{}\n",hf);
         out.flush();
+        LOG.trace("发回的响应4：\n{}\n",hf);
         out.write(hf);
+        LOG.trace("发回的响应5：\n{}\n",hf);
         out.close();
         LOG.trace("发回的响应：\n{}\n",response);
 
