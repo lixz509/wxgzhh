@@ -75,6 +75,8 @@ public class MessageConvertController {
 
         inMessageTemplate.convertAndSend(channel, inMessage);
 
+        LOG.trace("发回的响应0：\n{}\n",channel);
+
         String hf="<xml>" +
                 "<ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>" +
                 "<FromUserName><![CDATA["+inMessage.getToUserName()+"]]></FromUserName>" +
@@ -89,7 +91,7 @@ public class MessageConvertController {
 //        OutputStream out=response.getOutputStream();
         OutputStreamWriter out = new OutputStreamWriter(response
                 .getOutputStream(), "UTF-8");
-//        out.print(hf);
+//        out.print(hf);-
         LOG.trace("发回的响应3：\n{}\n",hf);
         out.flush();
         LOG.trace("发回的响应4：\n{}\n",hf);
