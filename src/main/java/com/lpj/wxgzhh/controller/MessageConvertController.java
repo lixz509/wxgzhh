@@ -59,7 +59,7 @@ public class MessageConvertController {
 //
 //        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
 //
-//        InMessage inMessage=MRS.XMLStringToBean(xml);
+        InMessage inMessage=MRS.XMLStringToBean(xml);
 //
 //        LOG.trace("转换为对象：\n{}\n",inMessage);
 //
@@ -100,7 +100,6 @@ public class MessageConvertController {
         out.close();
         LOG.trace("发回的响应：\n{}\n",response);
 
-        LOG.trace("反序列化的对象2"+im);
         return hf;
     }
 
