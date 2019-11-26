@@ -29,7 +29,7 @@ public class TextOutMessage extends OutMessage {
                 "<ToUserName><![CDATA["+getToUserName()+"]]></ToUserName>" +
                 "<FromUserName><![CDATA["+getFromUserName()+"]]></FromUserName>" +
                 "<CreateTime>"+getCreateTime()+"</CreateTime>" +
-                "<MsgType>"+getMsgType()+"</MsgType>" +
+                "<MsgType><![CDATA["+getMsgType()+"]]></MsgType>" +
                 "<Content><![CDATA["+getContent()+"]]></Content>" +
                 "</xml>";
     }
