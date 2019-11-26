@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lpj.wxgzhh.domain.InMessage;
 import com.lpj.wxgzhh.domain.OutMessage;
 import com.lpj.wxgzhh.service.MessageAnalysisService;
+import com.lpj.wxgzhh.service.OutMessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,6 +28,9 @@ public class MessageConvertController {
 
     @Autowired
     private MessageAnalysisService MRS;
+
+    @Autowired
+    private OutMessageService OMS;
 
     @Autowired
     private RedisTemplate<String,InMessage> inMessageTemplate;
@@ -82,12 +86,15 @@ public class MessageConvertController {
                 "<MsgType><![CDATA[text]]></MsgType>" +
                 "<Content><![CDATA["+inMessage.getContent()+"]]></Content>" +
                 "</xml>";
+
+        String hf2=OMS.getRepose(inMessage);
+
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         OutputStreamWriter out = new OutputStreamWriter(response
                 .getOutputStream(), "UTF-8");
         out.flush();
-        out.write(hf);
+        out.write(hf2);
         out.close();
         LOG.trace("发回的响应：\n{}\n",response);
         return hf;

@@ -5,6 +5,7 @@ import lombok.ToString;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Map;
 
 @Data
 @XmlRootElement(name="xml")
@@ -12,8 +13,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class OutMessage {
 
     private static final long serialVersionUID = 1L;
-
-    private Content text;
 
     //接收方帐号（收到的OpenID）
     private String toUserName;
@@ -75,26 +74,13 @@ public class OutMessage {
         this.content = content;
     }
 
-    public OutMessage(String toUser, String text) {
-        this.text = new Content(text);
+    public OutMessage(Map<String,String> requestMap) {
+        this.toUserName=requestMap.get("FromUserName");
+        this.fromUserName=requestMap.get("ToUserName");
+        this.createTime=System.currentTimeMillis()/1000+"";
     }
 
 
-    public static class Content {
-        private String content;
-
-        public Content(String content) {
-            this.content = content;
-        }
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-    }
 
 
 
