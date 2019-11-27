@@ -35,7 +35,6 @@ public class MessageConvertController {
     @Autowired
     private RedisTemplate<String,InMessage> inMessageTemplate;
 
-
     @GetMapping
     public String echo(
             @RequestParam("signature") String signature,
@@ -75,17 +74,9 @@ public class MessageConvertController {
 
         LOG.trace("反序列化的对象"+im);
 
-        String channel = "wxgzhh";
+        String channel = "wxgzhh_";
 
-        inMessageTemplate.convertAndSend(channel, inMessage);
-
-        String hf="<xml>" +
-                "<ToUserName><![CDATA["+inMessage.getFromUserName()+"]]></ToUserName>" +
-                "<FromUserName><![CDATA["+inMessage.getToUserName()+"]]></FromUserName>" +
-                "<CreateTime>12345678</CreateTime>" +
-                "<MsgType><![CDATA[text]]></MsgType>" +
-                "<Content><![CDATA["+inMessage.getContent()+"]]></Content>" +
-                "</xml>";
+        inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
         String hf2=OMS.getRepose(inMessage);
 
@@ -96,9 +87,8 @@ public class MessageConvertController {
         out.flush();
         out.write(hf2);
         out.close();
-        LOG.trace("发回的文本：\n{}\n",hf2);
         LOG.trace("发回的响应：\n{}\n",response);
-        return hf2;
+        return "hf2";
     }
 
 }
