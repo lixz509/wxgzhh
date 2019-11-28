@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -24,8 +25,19 @@ public class TextMessageApplication {
 	private static final Logger LOG = LoggerFactory.getLogger(TextMessageApplication.class);
 
 	@Autowired
-	@Qualifier("inMessageTemplate")
-	private RedisTemplate inMessageTemplate;
+	private RedisTemplate<String,InMessage> inMessageTemplate;
+	@Bean
+	public RedisTemplate<String, InMessage> inMessageTemplate(
+			@Autowired RedisConnectionFactory connectionFactory) {
+
+		RedisTemplate<String,InMessage> template = new RedisTemplate<>();
+		template.setConnectionFactory(connectionFactory);
+
+		// 使用序列化程序完成对象的序列化和反序列化，可以自定义
+		template.setValueSerializer(new Jackson2JsonRedisSerializer<>(InMessage.class));
+		return template;
+	}
+
 
 	@Bean
 	public MessageListener messageListener(){

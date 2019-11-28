@@ -20,19 +20,6 @@ public class OutMessageService {
 
     private static final Logger LOG = LoggerFactory.getLogger(OutMessageService.class);
 
-    //序列化和反序列化程序，用于将对象丢如redis消息队列
-    @Bean
-    public RedisTemplate<String, InMessage> inMessageTemplate(
-            @Autowired RedisConnectionFactory connectionFactory) {
-
-        RedisTemplate<String,InMessage> template = new RedisTemplate<>();
-        template.setConnectionFactory(connectionFactory);
-
-        // 使用序列化程序完成对象的序列化和反序列化，可以自定义
-        template.setValueSerializer(new Jackson2JsonRedisSerializer<>(InMessage.class));
-        return template;
-    }
-
     public String getRepose(InMessage inMessage) {
 
         switch (inMessage.getMsgType()){
