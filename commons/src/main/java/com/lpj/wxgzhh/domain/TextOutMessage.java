@@ -23,7 +23,6 @@ public class TextOutMessage extends OutMessage {
         this.content=content;
     }
 
-    @Override
     public String toString() {
         return "<xml>" +
                 "<ToUserName><![CDATA["+getToUserName()+"]]></ToUserName>" +
