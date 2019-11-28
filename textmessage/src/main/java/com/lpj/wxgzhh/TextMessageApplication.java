@@ -24,6 +24,7 @@ public class TextMessageApplication {
 	private static final Logger LOG = LoggerFactory.getLogger(TextMessageApplication.class);
 
 	@Autowired
+	@Qualifier("inMessageTemplate")
 	private RedisTemplate inMessageTemplate;
 
 	@Bean
