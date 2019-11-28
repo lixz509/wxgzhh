@@ -50,8 +50,8 @@ public class MessageConvertController {
             @RequestParam("signature") String signature,
             @RequestParam("timestamp") String timestamp,
             @RequestParam("nonce") String nonce,
-            HttpServletResponse response,
-            HttpServletRequest request,
+//            HttpServletResponse response,
+//            HttpServletRequest request,
             @RequestBody  String xml) throws JAXBException, IOException, ClassNotFoundException {
         LOG.trace("收到的消息原文：\n{}\n",xml);
 
@@ -79,16 +79,16 @@ public class MessageConvertController {
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
         String hf2=OMS.getRepose(inMessage);
-
-        request.setCharacterEncoding("utf-8");
-        response.setCharacterEncoding("utf-8");
-        OutputStreamWriter out = new OutputStreamWriter(response
-                .getOutputStream(), "UTF-8");
-        out.flush();
-        out.write(hf2);
-        out.close();
-        LOG.trace("发回的响应：\n{}\n",response);
-        return "hf2";
+//
+//        request.setCharacterEncoding("utf-8");
+//        response.setCharacterEncoding("utf-8");
+//        OutputStreamWriter out = new OutputStreamWriter(response
+//                .getOutputStream(), "UTF-8");
+//        out.flush();
+//        out.write(hf2);
+//        out.close();
+//        LOG.trace("发回的响应：\n{}\n",response);
+        return hf2;
     }
 
 }
