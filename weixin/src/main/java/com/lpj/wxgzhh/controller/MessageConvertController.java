@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
@@ -33,7 +32,7 @@ public class MessageConvertController {
     private OutMessageService OMS;
 
     @Autowired
-    private RedisTemplate<String,InMessage> inMessageTemplate;
+    private  RedisTemplate<String,InMessage> inMessageTemplate;
 
     @GetMapping
     public String echo(
@@ -79,7 +78,7 @@ public class MessageConvertController {
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
         String hf2=OMS.getRepose(inMessage);
-//
+
 //        request.setCharacterEncoding("utf-8");
 //        response.setCharacterEncoding("utf-8");
 //        OutputStreamWriter out = new OutputStreamWriter(response

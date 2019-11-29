@@ -54,4 +54,7 @@ public class Item {
         this.picUrl = picUrl;
         this.url = url;
     }
+
+    public Item() {
+    }
 }

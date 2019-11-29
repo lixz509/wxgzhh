@@ -26,10 +26,10 @@ public class NewsOutMessage extends OutMessage {
         this.item = item;
     }
 
-    public NewsOutMessage(Map<String, String> requestMap, String articleCount, Item item) {
+    public NewsOutMessage(Map<String, String> requestMap, Item item) {
         super(requestMap);
         this.setMsgType("news");
-        this.articleCount = articleCount;
+        this.setArticleCount("1");
         this.item = item;
     }
 
