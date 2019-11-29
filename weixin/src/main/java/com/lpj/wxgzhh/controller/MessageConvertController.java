@@ -4,6 +4,7 @@ package com.lpj.wxgzhh.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lpj.wxgzhh.domain.InMessage;
 import com.lpj.wxgzhh.domain.OutMessage;
+import com.lpj.wxgzhh.service.AccessTokenManager;
 import com.lpj.wxgzhh.service.MessageAnalysisService;
 import com.lpj.wxgzhh.service.OutMessageService;
 import org.slf4j.Logger;
@@ -33,6 +34,9 @@ public class MessageConvertController {
 
     @Autowired
     private  RedisTemplate<String,InMessage> inMessageTemplate;
+
+    @Autowired
+    private AccessTokenManager ATM;
 
     @GetMapping
     public String echo(
@@ -78,6 +82,10 @@ public class MessageConvertController {
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
         String hf2=OMS.getRepose(inMessage);
+
+        String body=ATM.getToken("account");
+
+        LOG.trace("获取到的令牌响应体"+body);
 
 //        request.setCharacterEncoding("utf-8");
 //        response.setCharacterEncoding("utf-8");

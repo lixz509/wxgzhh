@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CommonsService {
-    //序列化和反序列化程序，用于将对象丢如redis消息队列
+    //序列化和反序列化程序，用于将对象丢入redis消息队列
     @Bean
     public RedisTemplate<String, InMessage> inMessageTemplate(
             @Autowired RedisConnectionFactory connectionFactory) {

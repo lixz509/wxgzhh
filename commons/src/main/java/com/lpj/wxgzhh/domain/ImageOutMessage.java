@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class ImageOutMessage extends OutMessage  {
 
+    //通过素材管理中的接口上传多媒体文件，得到的id。
     private String mediaId;
 
     public String getMediaId() {

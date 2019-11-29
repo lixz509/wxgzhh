@@ -22,6 +22,7 @@ public class OutMessageService {
 
     private static final Logger LOG = LoggerFactory.getLogger(OutMessageService.class);
 
+    //测试用的方法，封装一个消息进行回复，正式使用时会更改，不在这里进行业务逻辑处理
     public String getRepose(InMessage inMessage) {
 
         switch (inMessage.getMsgType()){

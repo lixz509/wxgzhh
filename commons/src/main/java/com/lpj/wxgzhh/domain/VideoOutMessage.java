@@ -5,10 +5,13 @@ import java.util.Map;
 
 public class VideoOutMessage extends OutMessage {
 
+    //通过素材管理中的接口上传多媒体文件，得到的id
     private String mediaId;
 
+    //视频消息的标题
     private String title;
 
+    //视频消息的描述
     private String description;
 
     public String getMediaId() {
