@@ -72,7 +72,7 @@ public class TextMessageApplication {
 		NewsOutMessage nom= new NewsOutMessage(requestMap,item);
 		String url="https://api.weixin.qq.com/cgi-bin/user/info"
 		+ "?access_token=" + ATM.getToken("account")
-				+ "&openid=" + msg.getFromUserName()
+				+ "&openid=" + msg.getToUserName()
 				+ "&lang=zh_CN";
 		//创建HTTP客户端
 		HttpClient hc = HttpClient.newBuilder().build();
