@@ -76,7 +76,7 @@ public class TextMessageApplication {
 				+ "&lang=zh_CN";
 		//创建HTTP客户端
 		HttpClient hc = HttpClient.newBuilder().build();
-		HttpRequest request = HttpRequest.newBuilder(URI.create("url")).GET().build();
+		HttpRequest request = HttpRequest.newBuilder(URI.create(url)).GET().build();
 		try {
 			// 发送请求
 			// BodyHandlers里面包含了一系列的响应体处理程序，能够把响应体转换为需要的数据类型
