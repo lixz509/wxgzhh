@@ -81,11 +81,11 @@ public class MessageConvertController {
 
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
-        String hf2=OMS.getRepose(inMessage);
-
-        String body=ATM.getToken("account");
-
-        LOG.trace("获取到的令牌响应体"+body);
+//        String hf2=OMS.getRepose(inMessage);
+//
+//        String body=ATM.getToken("account");
+//
+//        LOG.trace("获取到的令牌响应体"+body);
 
 //        request.setCharacterEncoding("utf-8");
 //        response.setCharacterEncoding("utf-8");
@@ -95,7 +95,7 @@ public class MessageConvertController {
 //        out.write(hf2);
 //        out.close();
 //        LOG.trace("发回的响应：\n{}\n",response);
-        return hf2;
+        return "success";
     }
 
 }
