@@ -23,7 +23,6 @@ public class ImageOutMessage extends OutMessage  {
         this.mediaId=mediaId;
     }
 
-    @Override
     public String toString() {
         return "<xml>" +
                 "<ToUserName><![CDATA["+getToUserName()+"]]></ToUserName>" +

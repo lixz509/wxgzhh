@@ -1,8 +1,8 @@
 package com.lpj.wxgzhh;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.lpj.wxgzhh.domain.InMessage;
-import com.lpj.wxgzhh.domain.Item;
-import com.lpj.wxgzhh.domain.NewsOutMessage;
+import com.lpj.wxgzhh.domain.supportmessage.TextSupportMessage;
 import com.lpj.wxgzhh.service.AccessTokenManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,21 +22,26 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
+import java.net.http.HttpRequest.BodyPublishers;
 import java.net.http.HttpResponse;
 import java.nio.charset.Charset;
-import java.util.HashMap;
-import java.util.Map;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootApplication
 public class TextMessageApplication {
 
 	private static final Logger LOG = LoggerFactory.getLogger(TextMessageApplication.class);
+	private ObjectMapper objectMapper = new ObjectMapper();
 
 	@Autowired
 	private AccessTokenManager ATM;
 
 	@Autowired
 	private RedisTemplate<String,InMessage> inMessageTemplate;
+
+	//创建HTTP客户端
+	private HttpClient httpClient = HttpClient.newBuilder().build();
 
 	@Bean
 	public RedisMessageListenerContainer messageListenerContainer(@Autowired RedisConnectionFactory connectionFactory){
@@ -61,34 +66,34 @@ public class TextMessageApplication {
 	public void handle(InMessage msg){
 		//正常处理消息
 		System.out.println("收到的消息：" + msg);
-		Map<String, String> requestMap =new HashMap<>();
-		requestMap.put("ToUserName",msg.getToUserName());
-		requestMap.put("FromUserName",msg.getFromUserName());
-		Item item=new Item();
-		item.setTitle("你好啊111");
-		item.setDescription("这是一个测试的图文消息回复111");
-		item.setPicUrl("http://img-arch.pconline.com.cn/images/upload/upc/tx/photoblog/1712/19/c4/70328457_1513655137311.jpg");
-		item.setUrl("https://www.baidu.com/");
-		NewsOutMessage nom= new NewsOutMessage(requestMap,item);
-		String url="https://api.weixin.qq.com/cgi-bin/user/info"
-		+ "?access_token=" + ATM.getToken("account")
-				+ "&openid=" + msg.getToUserName()
-				+ "&lang=zh_CN";
-		//创建HTTP客户端
-		HttpClient hc = HttpClient.newBuilder().build();
-		HttpRequest request = HttpRequest.newBuilder(URI.create(url)).GET().build();
+//		Map<String, String> requestMap =new HashMap<>();
+//		requestMap.put("ToUserName",msg.getToUserName());
+//		requestMap.put("FromUserName",msg.getFromUserName());
+//		Item item=new Item();
+//		item.setTitle("你好啊111");
+//		item.setDescription("这是一个测试的图文消息回复111");
+//		item.setPicUrl("http://img-arch.pconline.com.cn/images/upload/upc/tx/photoblog/1712/19/c4/70328457_1513655137311.jpg");
+//		item.setUrl("https://www.baidu.com/");
+//		NewsOutMessage nom= new NewsOutMessage(requestMap,item);
+		TextSupportMessage tsm = new TextSupportMessage(msg.getFromUserName(), "欢迎关注我的公众号！");
+		String url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=" + ATM.getToken("account");
 		try {
+			//创建json数据用于传参
+			String json = this.objectMapper.writeValueAsString(tsm);
+			LOG.trace("将要发送的json数据",json);
+			//创建请求
+			HttpRequest request = HttpRequest.newBuilder(URI.create(url))
+					.POST(BodyPublishers.ofString(json, Charset.forName("UTF-8"))).build();
 			// 发送请求
 			// BodyHandlers里面包含了一系列的响应体处理程序，能够把响应体转换为需要的数据类型
 			// ofString表示转换为String类型的数据
 			// Charset.forName("UTF-8")表示使用UTF-8的编码转换数据
-			HttpResponse<String> response  = hc.send(request, HttpResponse.BodyHandlers.ofString(Charset.forName("UTF-8")));
+			HttpResponse<String> response  = httpClient.send(request, HttpResponse.BodyHandlers.ofString(Charset.forName("UTF-8")));
 			//接收响应
 			String body=response.body();
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
-
 
 	}
 
