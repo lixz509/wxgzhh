@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public abstract class SupportMessage {
 
+    //普通用户openid
     @JsonProperty("touser")
     private String toUser;
 
+    //消息类型
     @JsonProperty("msgtype")
     private String messageType;
 

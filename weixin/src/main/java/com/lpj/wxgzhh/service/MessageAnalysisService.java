@@ -1,6 +1,5 @@
 package com.lpj.wxgzhh.service;
 
-import com.lpj.wxgzhh.controller.MessageConvertController;
 import com.lpj.wxgzhh.domain.InMessage;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
