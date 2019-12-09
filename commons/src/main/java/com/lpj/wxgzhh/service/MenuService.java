@@ -35,14 +35,14 @@ public class MenuService {
         sb1.getSubButton().add(new ViewMenuButton("二级跳转","http://www.4399.com"));
         sb1.getSubButton().add(new ScancodePushMenuButton("扫码推事件","2-2"));
         sb1.getSubButton().add(new ScancodeWaitmsgMenuButton("扫码带提示","2-3"));
-//        sb1.getSubButton().add(new MediaIdMenuButton("图片","3-3"));
+//        sb1.getSubButton().add(new MediaIdMenuButton("图片","23f21sTBn-MFUq3ndd6TahV93dpN-6tLMe5NxPNB7hj5TBg7s_QFYHdD-0rpTrt6"));
         btn.getButton().add(sb1);
         SubButtonMenuButton sb2=new SubButtonMenuButton("子菜单二");
         sb2.getSubButton().add(new PicWeixinMenuButton("微信相册发图","3-1"));
         sb2.getSubButton().add(new LocationSelectMenuButton("发送位置","3-2"));
         sb2.getSubButton().add(new PicSysphotoMenuButton("系统拍照发图","3-3"));
         sb2.getSubButton().add(new PicPhotoOrAlbumMenuButton("拍照或者相册发图","3-4"));
-//        sb2.getSubButton().add(new ViewLlimitedMenuButton("图文消息","3-5"));
+//        sb2.getSubButton().add(new ViewLlimitedMenuButton("图文消息","23f21sTBn-MFUq3ndd6TahV93dpN-6tLMe5NxPNB7hj5TBg7s_QFYHdD-0rpTrt6"));
         btn.getButton().add(sb2);
         String url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=" + ATM.getToken("account");
         try {

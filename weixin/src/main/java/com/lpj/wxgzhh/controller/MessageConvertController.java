@@ -74,7 +74,7 @@ public class MessageConvertController {
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
         //重置菜单
-        MS.Menu();
+//        MS.Menu();
 
         return "success";
     }
