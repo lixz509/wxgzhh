@@ -4,7 +4,9 @@ package com.lpj.wxgzhh.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lpj.wxgzhh.domain.InMessage;
 import com.lpj.wxgzhh.domain.OutMessage;
+import com.lpj.wxgzhh.domain.button.*;
 import com.lpj.wxgzhh.service.AccessTokenManager;
+import com.lpj.wxgzhh.service.MenuService;
 import com.lpj.wxgzhh.service.MessageAnalysisService;
 import com.lpj.wxgzhh.service.OutMessageService;
 import org.slf4j.Logger;
@@ -38,6 +40,9 @@ public class MessageConvertController {
     @Autowired
     private AccessTokenManager ATM;
 
+    @Autowired
+    private MenuService MS;
+
     @GetMapping
     public String echo(
             @RequestParam("signature") String signature,
@@ -53,48 +58,24 @@ public class MessageConvertController {
             @RequestParam("signature") String signature,
             @RequestParam("timestamp") String timestamp,
             @RequestParam("nonce") String nonce,
-//            HttpServletResponse response,
-//            HttpServletRequest request,
             @RequestBody  String xml) throws JAXBException, IOException, ClassNotFoundException {
-        LOG.trace("收到的消息原文：\n{}\n",xml);
-
-        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
-
-        Map<String,String> xmlMap=MRS.parseXml(isXML);
-        LOG.trace("解析后：\n{}\n",xmlMap);
-
-        LOG.trace("解析后获取类型：\n{}\n",xmlMap.get("MsgType"));
-
+//        LOG.trace("收到的消息原文：\n{}\n",xml);
+//        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
+//        Map<String,String> xmlMap=MRS.parseXml(isXML);
+//        LOG.trace("解析后：\n{}\n",xmlMap);
+//        byte[] bytes=MRS.serialize(xml);
+//        LOG.trace("解析为后的字节数组"+bytes);
+//        InMessage im=MRS.toInmaesage(bytes);
+//        LOG.trace("反序列化的对象"+im);
         InMessage inMessage=MRS.XMLStringToBean(xml);
-
         LOG.trace("转换为对象：\n{}\n",inMessage);
-
-        byte[] bytes=MRS.serialize(xml);
-
-        LOG.trace("解析为后的字节数组"+bytes);
-
-        InMessage im=MRS.toInmaesage(bytes);
-
-        LOG.trace("反序列化的对象"+im);
-
         String channel = "wxgzhh_";
-
+        //将得到的消息存入消息队列，并在前面加入消息类型
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
-//        String hf2=OMS.getRepose(inMessage);
-//
-//        String body=ATM.getToken("account");
-//
-//        LOG.trace("获取到的令牌响应体"+body);
+        //设置菜单
+        MS.Menu();
 
-//        request.setCharacterEncoding("utf-8");
-//        response.setCharacterEncoding("utf-8");
-//        OutputStreamWriter out = new OutputStreamWriter(response
-//                .getOutputStream(), "UTF-8");
-//        out.flush();
-//        out.write(hf2);
-//        out.close();
-//        LOG.trace("发回的响应：\n{}\n",response);
         return "success";
     }
 
