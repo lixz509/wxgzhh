@@ -4,3 +4,4 @@ cd weixin
 mvn spring-boot:start
 cd ../textmessage
 mvn spring-boot:start
+cd ..
