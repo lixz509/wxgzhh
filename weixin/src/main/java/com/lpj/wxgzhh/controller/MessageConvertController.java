@@ -73,7 +73,7 @@ public class MessageConvertController {
         //将得到的消息存入消息队列，并在前面加入消息类型
         inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
 
-        //设置菜单
+        //重置菜单
         MS.Menu();
 
         return "success";

@@ -64,7 +64,6 @@ public class TextMessageApplication {
 
 	public void handle(InMessage msg){
 		//正常处理消息
-		System.out.println("收到的消息：" + msg);
 		SupportMessage message=null;
 		if(msg.getContent().equals("文本")){
 			message = new TextSupportMessage(msg.getFromUserName(), "这是一个文本消息");
