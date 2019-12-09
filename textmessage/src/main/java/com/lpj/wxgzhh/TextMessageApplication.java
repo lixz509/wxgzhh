@@ -67,7 +67,7 @@ public class TextMessageApplication {
 		System.out.println("收到的消息：" + msg);
 		SupportMessage message=null;
 		if(msg.getContent().equals("文本")){
-			message = new TextSupportMessage(msg.getFromUserName(), "欢迎关注我的公众号！");
+			message = new TextSupportMessage(msg.getFromUserName(), "这是一个文本消息");
 		}else if (msg.getContent().equals("图片")){
 			message=new ImageSupportMessage(msg.getFromUserName(),
 					"http://img-arch.pconline.com.cn/images/upload/upc/tx/photoblog/1712/19/c4/70328457_1513655137311.jpg");
@@ -118,6 +118,7 @@ public class TextMessageApplication {
 			HttpResponse<String> response  = httpClient.send(request, HttpResponse.BodyHandlers.ofString(Charset.forName("UTF-8")));
 			//接收响应
 			String body=response.body();
+			System.out.println("响应为"+body);
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}

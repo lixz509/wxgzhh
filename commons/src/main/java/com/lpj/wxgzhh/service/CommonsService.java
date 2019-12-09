@@ -22,4 +22,13 @@ public class CommonsService {
         template.setValueSerializer(new Jackson2JsonRedisSerializer<>(InMessage.class));
         return template;
     }
+    @Bean
+    public <T> RedisTemplate<String, T> redisTemplate(
+            @Autowired RedisConnectionFactory connectionFactory) {
+        RedisTemplate<String,T> template = new RedisTemplate<>();
+        template.setConnectionFactory(connectionFactory);
+        // 使用序列化程序完成对象的序列化和反序列化，可以自定义
+        template.setValueSerializer(new Jackson2JsonRedisSerializer<>(InMessage.class));
+        return template;
+    }
 }
