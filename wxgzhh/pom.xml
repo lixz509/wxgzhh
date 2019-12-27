@@ -12,6 +12,7 @@
     <module>weixin</module>
     <module>commons</module>
     <module>textmessage</module>
+      <module>subscribe</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
