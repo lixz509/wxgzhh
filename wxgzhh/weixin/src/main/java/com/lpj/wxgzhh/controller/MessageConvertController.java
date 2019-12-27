@@ -59,7 +59,7 @@ public class MessageConvertController {
             @RequestParam("timestamp") String timestamp,
             @RequestParam("nonce") String nonce,
             @RequestBody  String xml) throws JAXBException, IOException, ClassNotFoundException {
-//        LOG.trace("收到的消息原文：\n{}\n",xml);
+        LOG.trace("收到的消息原文：\n{}\n",xml);
 //        InputStream isXML = new ByteArrayInputStream(xml.getBytes());
 //        Map<String,String> xmlMap=MRS.parseXml(isXML);
 //        LOG.trace("解析后：\n{}\n",xmlMap);
