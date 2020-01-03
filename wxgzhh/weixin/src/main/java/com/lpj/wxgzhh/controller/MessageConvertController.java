@@ -70,8 +70,12 @@ public class MessageConvertController {
         InMessage inMessage=MRS.XMLStringToBean(xml);
         LOG.trace("转换为对象：\n{}\n",inMessage);
         String channel = "wxgzhh_";
-        //将得到的消息存入消息队列，并在前面加入消息类型
-        inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
+        if(inMessage.getMsgType().equals("event")){
+            inMessageTemplate.convertAndSend(channel+inMessage.getMsgType()+"_"+inMessage.getEvent(), inMessage);
+        }else {
+            //将得到的消息存入消息队列，并在前面加入消息类型
+            inMessageTemplate.convertAndSend(channel+inMessage.getMsgType(), inMessage);
+        }
 
         //重置菜单
 //        MS.Menu();
