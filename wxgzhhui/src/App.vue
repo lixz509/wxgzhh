@@ -1,13 +1,22 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <router-link :to="{path: '/Footer'}">Footer</router-link>
+    <router-link :to="{path: '/Home'}">Home</router-link>
+    <router-link :to="{path: '/BottomNavigation'}">BottomNavigation</router-link>
     <router-view/>
+    <!-- <bottomNavigation></bottomNavigation> -->
   </div>
 </template>
 
 <script>
+// import bottomNavigation from './components/bottomNavigation'
+import bottomNavigation from '@/components/BottomNavigation'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+      bottomNavigation
+  }
 }
 </script>
 
