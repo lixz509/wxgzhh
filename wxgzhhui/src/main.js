@@ -3,6 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 按需导入muti-ui中的组件
+import { Swipe, SwipeItem } from 'mint-ui';
+
+
+// 注册组件
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
+
 
 Vue.config.productionTip = false
 

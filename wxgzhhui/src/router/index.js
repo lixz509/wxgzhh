@@ -1,8 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Footer from '@/components/FooterButton'
-import BottomNavigation from '@/components/BottomNavigation'
+import Home from '@/components/Home'
+import Message from '@/components/Message'
+import Shopping from '@/components/Shopping'
+import My from '@/components/My'
+import Search from "@/components/Search"
+import ChatRoom from "@/components/ChatRoom"
+import Commodity from "@/components/Commodity"
+import CommodityDetails from "@/components/CommodityDetails"
 
 Vue.use(Router)
 
@@ -10,13 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/Home',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     },
     {
       path: '/Footer',
@@ -24,9 +25,44 @@ export default new Router({
       component: Footer
     },
     {
-      path: '/BottomNavigation',
-      name: 'bottomNavigation',
-      component: BottomNavigation
-    }
+      path: '/Search',
+      name: 'Search',
+      component: Search
+    },
+    {
+      path: '/Home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/Message',
+      name: 'Message',
+      component: Message
+    },
+    {
+      path: '/Shopping',
+      name: 'Shopping',
+      component: Shopping
+    },
+    {
+      path: '/My',
+      name: 'My',
+      component: My
+    },
+    {
+      path: '/ChatRoom',
+      name: 'ChatRoom',
+      component: ChatRoom
+    },
+    {
+      path: '/Commodity',
+      name: 'Commodity',
+      component: Commodity
+    },
+    {
+      path: '/CommodityDetails',
+      name: 'CommodityDetails',
+      component: CommodityDetails
+    },
   ]
 })
