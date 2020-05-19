@@ -78,7 +78,7 @@ public class MessageConvertController {
         }
 
         //重置菜单
-        MS.Menu();
+//        MS.Menu();
 
         return "success";
     }
