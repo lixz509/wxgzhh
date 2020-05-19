@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="重置按钮2" />
+    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +70,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -314,6 +316,7 @@
       <workItem from="1589120922005" duration="594000" />
       <workItem from="1589791754955" duration="1402000" />
       <workItem from="1589868615677" duration="4056000" />
+      <workItem from="1589877829255" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -587,7 +590,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加其余回复方式，没测试" />
     <MESSAGE value="测试图文消息回复" />
     <MESSAGE value="增加获取token，加入注释" />
     <MESSAGE value="使用TextMessage模块回复1" />
@@ -612,17 +614,18 @@
     <MESSAGE value="加点静态文件1" />
     <MESSAGE value="重置按钮" />
     <MESSAGE value="重置按钮2" />
-    <option name="LAST_COMMIT_MESSAGE" value="重置按钮2" />
+    <MESSAGE value="重置按钮4" />
+    <option name="LAST_COMMIT_MESSAGE" value="重置按钮4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583650892648">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583650892648" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1589872571073">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1589877936948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589872571073" />
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589877936948" />
     <state width="1126" height="231" key="GridCell.Tab.0.bottom" timestamp="1589795240199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -655,14 +658,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1126" height="231" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589795240199" />
-    <state x="270" y="55" key="SettingsEditor" timestamp="1589096756364">
+    <state x="270" y="55" key="SettingsEditor" timestamp="1589877911498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589096756364" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589872834654">
+    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589877911498" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589877942790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589872834654" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589877942790" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
