@@ -1,95 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="自动创建相应表">
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/HomeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/StoreApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeConvertController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/HotSaleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeConvertService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/test/java/com/lpj/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/a.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/classify/classify8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/Receiving.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/aboutUs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/aftermarket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/balance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/balla.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/ballb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/classify.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/evaluate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/faddish.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/favorite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/homea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/homeb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/information.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/messagea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/messageb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/mya.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/myb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/opposite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/retreat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/security.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/selection.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/shipments.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/shoppinga.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/shoppingb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/shoppingc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/icon/task.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/portrait/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/portrait/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="添加相应表，首页获取数据改为从后台">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreClassify.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreClassify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreCommodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreCommodity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreHotSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreHotSale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreLogistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreLogistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreClassify.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreClassify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity$commodityStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreHotSale$hotSaleStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreHotSale.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreHotSale.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreLogistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreLogistics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stop.sh" beforeDir="false" afterPath="$PROJECT_DIR$/stop.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weixin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/static/a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/a1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/static/b.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/b1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/static/c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/c1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/static/d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/static/e.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/hotSale.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -445,7 +358,7 @@
       <workItem from="1590231471930" duration="1416000" />
       <workItem from="1590244262671" duration="4854000" />
       <workItem from="1590309074665" duration="2527000" />
-      <workItem from="1590314624713" duration="115000" />
+      <workItem from="1590314624713" duration="1064000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -782,10 +695,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1589904844751">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1590316472981">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589904844751" />
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590316472981" />
     <state width="1126" height="276" key="GridCell.Tab.0.bottom" timestamp="1590314599674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -822,10 +735,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589904860155">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590315070015">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589904860155" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590315070015" />
     <state x="178" y="107" key="new project wizard" timestamp="1589963992943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
