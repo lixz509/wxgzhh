@@ -21,6 +21,10 @@ public class StoreClassify {
     @JsonProperty("classify_name")
     private String classifyName;
 
+    // 分类图片
+    @JsonProperty("classify_image")
+    private String classifyImage;
+
     public String getClassifyId() {
         return classifyId;
     }
@@ -35,5 +39,13 @@ public class StoreClassify {
 
     public void setClassifyName(String classifyName) {
         this.classifyName = classifyName;
+    }
+
+    public String getClassifyImage() {
+        return classifyImage;
+    }
+
+    public void setClassifyImage(String classifyImage) {
+        this.classifyImage = classifyImage;
     }
 }

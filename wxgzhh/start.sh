@@ -6,4 +6,6 @@ cd ../textmessage
 mvn spring-boot:start
 cd ../subscribe
 mvn spring-boot:start
+cd ../store
+mvn spring-boot:start
 cd ..

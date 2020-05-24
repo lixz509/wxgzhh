@@ -6,6 +6,9 @@ import router from './router'
 // 按需导入muti-ui中的组件
 import { Swipe, SwipeItem } from 'mint-ui';
 
+// 引入请求插件
+import  VueResource  from 'vue-resource'
+Vue.use(VueResource) 
 
 // 注册组件
 Vue.component(Swipe.name, Swipe);

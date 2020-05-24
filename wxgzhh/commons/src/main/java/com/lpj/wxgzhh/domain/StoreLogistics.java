@@ -57,6 +57,12 @@ public class StoreLogistics {
     @Enumerated(EnumType.STRING)
     private logisticsStatus logisticsStatus;
 
+
+    // 订单id
+    @Column(length = 36 )
+    @JsonProperty("order_id ")
+    private String orderId;
+
     public String getLogisticsId() {
         return logisticsId;
     }
@@ -119,5 +125,13 @@ public class StoreLogistics {
 
     public void setLogisticsStatus(StoreLogistics.logisticsStatus logisticsStatus) {
         this.logisticsStatus = logisticsStatus;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 }

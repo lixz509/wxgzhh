@@ -7,15 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="textmessage" />
-        <module name="commons" />
-        <module name="subscribe" />
         <module name="weixin" />
+        <module name="commons" />
+        <module name="store" />
+        <module name="subscribe" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="commons" options="-parameters" />
+      <module name="store" options="-parameters" />
       <module name="subscribe" options="-parameters" />
       <module name="textmessage" options="-parameters" />
       <module name="weixin" options="-parameters" />

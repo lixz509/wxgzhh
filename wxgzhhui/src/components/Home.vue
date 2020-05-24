@@ -5,7 +5,7 @@
   padding: 0px;
 }
 body {
-  background-color: #2c3e50;
+  background-color: aliceblue;
 }
 #searchFrame {
   position: relative;
@@ -119,7 +119,7 @@ body {
   line-height: 4vw;
 }
 /* 今日爆款 */
-.hotSales {
+.faddishs {
   position: relative;
   width: 100vw;
   height: 50vw;
@@ -128,7 +128,7 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.hotSaleP,
+.faddishP,
 .classifyP,
 .selectionP {
   position: relative;
@@ -137,27 +137,27 @@ body {
   background-color: yellow;
   vertical-align: bottom;
 }
-.hotSale {
+.faddish {
   position: relative;
   float: left;
   width: 32vw;
   height: 40vw;
   background-color: seashell;
 }
-.hotSale img {
+.faddish img {
   margin: 2vw 4vw 0vw;
   width: 24vw;
   height: 24vw;
   vertical-align: bottom;
 }
-.hotSalePrice {
+.faddishPrice {
   font-size: 6vw;
   line-height: 6vw;
   text-align: center;
   overflow: hidden;
   color: red;
 }
-.hotSaleText {
+.faddishText {
   margin-top: 2vw;
   width: 32vw;
   font-size: 4vw;
@@ -194,11 +194,11 @@ body {
   left: 35vw;
   top: 5vw;
   width: 65vw;
-  font-size: 5vw;
+  font-size: 4vw;
   overflow: hidden;
   text-align: left;
-  height: 5vw;
-  line-height: 5vw;
+  height: 4vw;
+  line-height: 4vw;
   text-overflow: ellipsis;
 }
 .selectionParticulars {
@@ -206,27 +206,27 @@ body {
   left: 30vw;
   top: 20vw;
   width: 70vw;
-  height: 6vw;
-  font-size: 6vw;
+  height: 5vw;
+  font-size: 5vw;
   overflow: hidden;
 }
 .selectionDiscount {
   font-size: 5vw;
   background-color: red;
-  line-height: 6vw;
+  line-height: 5vw;
   color: white;
   border-radius: 5px;
   margin-left: 5vw;
   float: left;
 }
 .selectionPrice {
-  font-size: 6vw;
-  line-height: 6vw;
+  font-size: 4vw;
+  line-height: 4vw;
   margin-left: 2vw;
   float: left;
 }
 .selectionOriginalPrice {
-  font-size: 4vw;
+  font-size: 3vw;
   padding-top: 1vw;
   line-height: 6vw;
   color: gray;
@@ -240,6 +240,7 @@ body {
   right: 5vw;
   width: 20vw;
   height: 13vw;
+  font-size: 3.8vw;
   background-color: red;
   font-weight: bold;
   text-align: center;
@@ -264,8 +265,8 @@ body {
         <input type="text" class="searchtexts" />
       </router-link>
     </div>
-    <router-link :to="{path: '/CommodityDetails'}">
     <div id="slideshow">
+      <!-- <router-link :to="{path: '/CommodityDetails'}"> </router-link> -->
       <img class="leftarrows" src="../../static/icon/left.png" @click="leftarrows" />
       <img class="rigtharrows" src="../../static/icon/right.png" @click="rigtharrows" />
       <div id="ball">
@@ -277,43 +278,52 @@ body {
       </div>
       <div
         id="carousel"
+        v-if="paperlist.slideShows"
         :style="{left:leftshift+'vw'}"
         @touchstart="touchStart"
         @touchend="touchEnd"
       >
-        <img class="carouselImg" v-for="(slideshow,i) in slideshowUrl" :src="slideshow" />
+        <img
+          class="carouselImg"
+          v-for="(slideshow,i) in paperlist.slideShows"
+          :src="slideshow.particularsUrl"
+        />
       </div>
     </div>
-    </router-link>
 
     <div class="classifys">
       <img class="classifyP" src="../../static/icon/classify.jpg" />
       <div
         class="classify"
-        v-for="(classify,i) in classifys"
+        v-for="(classify,i) in paperlist.classify"
         :style="{'margin-right':(i==3||i==7?'0vw':'2vw')}"
       >
-        <img :src="classify.classifyImgUrl" />
-        <div class="classifyText">{{classify.classifyText}}</div>
+        <img :src="classify.classifyImage" />
+        <div class="classifyText">{{classify.classifyName}}</div>
       </div>
     </div>
-    <div class="hotSales">
-      <img class="hotSaleP" src="../../static/icon/hotSale.jpg" />
-      <div class="hotSale" v-for="(hotSale,i) in hotSales" :style="{'margin':(i==1?'0 2vw':'0')}">
-        <img :src="hotSale.hotSaleImgUrl" />
-        <div class="hotSalePrice">￥{{hotSale.price}}</div>
-        <div class="hotSaleText">{{hotSale.hotSaleText}}</div>
+
+    <div class="faddishs">
+      <img class="faddishP" src="../../static/icon/faddish.jpg" />
+      <div
+        class="faddish"
+        v-for="(faddish,i) in paperlist.faddish"
+        :style="{'margin':(i==1?'0 2vw':'0')}"
+      >
+        <img :src="faddish.particularsUrl" />
+        <div class="faddishPrice">￥{{faddish.price}}</div>
+        <div class="faddishText">{{faddish.commodityName}}</div>
       </div>
     </div>
     <div class="selections">
       <img class="selectionP" src="../../static/icon/selection.jpg" />
-      <div class="selection" v-for="(selection,i) in selections">
-        <img :src="selection.selectionImgUrl" />
-        <div class="selectionText">{{selection.selectionText}}</div>
+      <div class="selection" v-for="(selection,i) in paperlist.hotSales">
+        <img :src="selection.particularsUrl" />
+        <div class="selectionText">{{selection.commodityName}}</div>
         <div class="selectionParticulars">
-          <div class="selectionDiscount">{{selection.selectionDiscount}}</div>
-          <div class="selectionPrice">￥{{selection.selectionPrice}}</div>
-          <div class="selectionOriginalPrice">{{selection.selectionOriginalPrice}}</div>
+          <div class="selectionDiscount">{{selection.discount}}折</div>
+          <div class="selectionPrice">￥{{selection.price}}</div>
+          <div class="selectionOriginalPrice">{{selection.originalPrice}}</div>
         </div>
         <div class="monthlySales">
           <p>已销售</p>
@@ -331,20 +341,13 @@ import Search from "@/components/Search";
 export default {
   data() {
     return {
+      paperlist: [],
       // 传递给底部导航栏的图片地址
       imagesUrl: {
         home: "../static/icon/homeb.png",
         message: "../static/icon/messagea.png",
         shopping: "../static/icon/shoppinga.png",
         my: "../static/icon/mya.png"
-      },
-      // 轮播图地址
-      slideshowUrl: {
-        one: "../static/a.jpg",
-        two: "../static/b.jpg",
-        three: "../static/c.jpg",
-        four: "../static/d.jpg",
-        five: "../static/e.jpg"
       },
       leftshift: 0, //左移动的偏移量
       intervalId: "", //计时器
@@ -357,100 +360,24 @@ export default {
         { night: false },
         { night: false },
         { night: false }
-      ],
-      classifys: [
-        // 设置分类图片，名称
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类1"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类2"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类3"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类4"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类5"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类6"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类7"
-        },
-        {
-          classifyImgUrl: "../static/a.jpg",
-          classifyText: "分类8"
-        }
-      ],
-      hotSales: [
-        // 今日爆款商品图片名称价格
-        {
-          hotSaleImgUrl: "../static/a.jpg",
-          hotSaleText: "超值好商品超值好商品",
-          price: "125.00"
-        },
-        {
-          hotSaleImgUrl: "../static/a.jpg",
-          hotSaleText: "超值好商品超值好商品",
-          price: "99.00"
-        },
-        {
-          hotSaleImgUrl: "../static/a.jpg",
-          hotSaleText: "超值好商品超值好商品",
-          price: "25.00"
-        }
-      ],
-      selections: [
-        // 精选好物图片名称折扣售价原价月销量
-        {
-          selectionImgUrl: "../static/b.jpg",
-          selectionText: "拣选好物好物精选",
-          selectionDiscount: "2折",
-          selectionPrice: "100",
-          selectionOriginalPrice: "500",
-          monthlySales: "1555"
-        },
-        {
-          selectionImgUrl: "../static/b.jpg",
-          selectionText: "拣选好物好物精选",
-          selectionDiscount: "2折",
-          selectionPrice: "100",
-          selectionOriginalPrice: "500",
-          monthlySales: "1555"
-        },
-        {
-          selectionImgUrl: "../static/b.jpg",
-          selectionText: "拣选好物好物精选",
-          selectionDiscount: "2折",
-          selectionPrice: "100",
-          selectionOriginalPrice: "500",
-          monthlySales: "1555"
-        },
-        {
-          selectionImgUrl: "../static/b.jpg",
-          selectionText: "拣选好物好物精选",
-          selectionDiscount: "2折",
-          selectionPrice: "1000",
-          selectionOriginalPrice: "500",
-          monthlySales: "1555"
-        }
       ]
     };
   },
   name: "home",
   components: {
     Footer
+  },
+  created() {
+    this.$http
+      .post(
+        "http://127.0.0.1:8093/store/home?userid=1",
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+      })
+      .catch(e => {});
   },
   methods: {
     // 自动轮播事件

@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="store_hot_sale") // 指定表名，若不指定，默认表名为类名
 public class StoreHotSale {
 
-    public static enum hotSaleStatus{
+    public static enum hotSaleState{
         // 轮播图
         IS_SLIDESHOW,
         // 好物
@@ -40,7 +40,7 @@ public class StoreHotSale {
     // 好物状态
     @JsonProperty("hot_sale_state")
     @Enumerated(EnumType.STRING)
-    private hotSaleStatus hotSaleStatus;
+    private hotSaleState hotSaleState;
 
     public String getHotSaleId() {
         return hotSaleId;
@@ -66,11 +66,21 @@ public class StoreHotSale {
         this.hotSaleTime = hotSaleTime;
     }
 
-    public StoreHotSale.hotSaleStatus getHotSaleStatus() {
-        return hotSaleStatus;
+    public StoreHotSale.hotSaleState getHotSaleState() {
+        return hotSaleState;
     }
 
-    public void setHotSaleStatus(StoreHotSale.hotSaleStatus hotSaleStatus) {
-        this.hotSaleStatus = hotSaleStatus;
+    public void setHotSaleState(StoreHotSale.hotSaleState hotSaleState) {
+        this.hotSaleState = hotSaleState;
+    }
+
+    @Override
+    public String toString() {
+        return "StoreHotSale{" +
+                "hotSaleId='" + hotSaleId + '\'' +
+                ", commodityId='" + commodityId + '\'' +
+                ", hotSaleTime='" + hotSaleTime + '\'' +
+                ", hotSaleState=" + hotSaleState +
+                '}';
     }
 }

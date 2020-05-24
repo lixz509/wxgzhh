@@ -5,4 +5,6 @@ cd ../textmessage
 mvn spring-boot:stop
 cd ../subscribe
 mvn spring-boot:stop
+cd ../store
+mvn spring-boot:stop
 cd ..

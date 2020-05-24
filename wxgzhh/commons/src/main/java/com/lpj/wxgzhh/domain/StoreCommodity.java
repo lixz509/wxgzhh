@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name="store_commodity") // 指定表名，若不指定，默认表名为类名
 public class StoreCommodity {
 
-    public static enum commodityStatus{
+    public static enum commodityState{
         // 正常使用状态
         IS_NORMAL,
         // 冻结状态
@@ -60,7 +60,7 @@ public class StoreCommodity {
     private String classifyId;
 
     // 商品月销售
-    @JsonProperty("Monthly_sales ")
+    @JsonProperty("Monthly_sales")
     private String MonthlySales ;
 
 
@@ -76,7 +76,7 @@ public class StoreCommodity {
     // 商品状态
     @JsonProperty("commodity_state")
     @Enumerated(EnumType.STRING)
-    private commodityStatus commodityState;
+    private commodityState commodityState;
 
     public String getCommodityId() {
         return commodityId;
@@ -174,11 +174,30 @@ public class StoreCommodity {
         this.commoditySurplus = commoditySurplus;
     }
 
-    public commodityStatus getCommodityState() {
+    public StoreCommodity.commodityState getCommodityState() {
         return commodityState;
     }
 
-    public void setCommodityState(commodityStatus commodityState) {
+    public void setCommodityState(StoreCommodity.commodityState commodityState) {
         this.commodityState = commodityState;
+    }
+
+    @Override
+    public String toString() {
+        return "StoreCommodity{" +
+                "commodityId='" + commodityId + '\'' +
+                ", commodityName='" + commodityName + '\'' +
+                ", commodityIntro='" + commodityIntro + '\'' +
+                ", originalPrice='" + originalPrice + '\'' +
+                ", price='" + price + '\'' +
+                ", discount='" + discount + '\'' +
+                ", showUrl='" + showUrl + '\'' +
+                ", particularsUrl='" + particularsUrl + '\'' +
+                ", classifyId='" + classifyId + '\'' +
+                ", MonthlySales='" + MonthlySales + '\'' +
+                ", commodityNum='" + commodityNum + '\'' +
+                ", commoditySurplus='" + commoditySurplus + '\'' +
+                ", commodityState=" + commodityState +
+                '}';
     }
 }
