@@ -370,7 +370,7 @@ export default {
   created() {
     this.$http
       .post(
-        "http://127.0.0.1:8093/store/home?userid=1",
+        "http://location:8093/store/home?userid=1",
         {},
         { emulateJSON: true }
       )
