@@ -9,6 +9,12 @@ import java.util.Date;
 @Entity // 表示一个JPA的实体
 @Table(name="store_dialogue") // 指定表名，若不指定，默认表名为类名
 public class StoreDialogue {
+
+    public static enum dialogueState{
+        IS_UNREAD,
+        IS_READ
+    }
+
     // 会话id
     @Id
     @Column(length = 36 )
@@ -35,6 +41,11 @@ public class StoreDialogue {
     // 文本内容
     @JsonProperty("dialogue_text")
     private String dialogueText;
+
+    // 会话状态
+    @JsonProperty("dialogue_state")
+    @Enumerated(EnumType.STRING)
+    private  dialogueState dialogueState;
 
     public String getDialogueId() {
         return dialogueId;
@@ -74,5 +85,25 @@ public class StoreDialogue {
 
     public void setDialogueText(String dialogueText) {
         this.dialogueText = dialogueText;
+    }
+
+    public StoreDialogue.dialogueState getDialogueState() {
+        return dialogueState;
+    }
+
+    public void setDialogueState(StoreDialogue.dialogueState dialogueState) {
+        this.dialogueState = dialogueState;
+    }
+
+    @Override
+    public String toString() {
+        return "StoreDialogue{" +
+                "dialogueId='" + dialogueId + '\'' +
+                ", sendId='" + sendId + '\'' +
+                ", receptionId='" + receptionId + '\'' +
+                ", dialogueTime=" + dialogueTime +
+                ", dialogueText='" + dialogueText + '\'' +
+                ", dialogueState=" + dialogueState +
+                '}';
     }
 }

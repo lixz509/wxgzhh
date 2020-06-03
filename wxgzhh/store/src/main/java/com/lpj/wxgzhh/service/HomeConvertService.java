@@ -34,7 +34,7 @@ public class HomeConvertService {
     @Autowired
     private ClassifyRepository CLR;
 
-    @Bean
+
     public String homeShow(){
 //        String json= JSON.toJSONString(s);
 //        JSONArray jsonArray = JSONArray.fromArray(new ArrayList[]{slideshowCommodity});
