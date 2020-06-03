@@ -191,6 +191,7 @@ export default {
     this.intervalId = setInterval(this.refresh, 1000);
   },
   beforeDestroy() {
+    // 销毁定时器
     this.intervalId = "";
   },
   components: {
