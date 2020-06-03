@@ -190,6 +190,9 @@ export default {
   mounted() {
     this.intervalId = setInterval(this.refresh, 1000);
   },
+  beforeDestroy() {
+    this.intervalId = "";
+  },
   components: {
     Footer
   }
