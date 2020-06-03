@@ -60,16 +60,16 @@ body {
     <div class="messageHead">
       <p style="text-align: center;padding-top: 15px">消息</p>
     </div>
-    <div class="dialogueList">
-      <div class="dialogue" v-for="(dialogue,i) in dialogueList">
-        <router-link :to="{path: '/ChatRoom'}">
+    <div class="dialogueList" v-if="paperlist.chatDtos" v-for="(dialogue,i) in paperlist.chatDtos">
+      <router-link :to="{path: '/ChatRoom',query:{dialogueUserId:dialogue.dialogueUserId}}">
+        <div class="dialogue">
           <div class="dialogueName">{{dialogue.dialogueName}}</div>
           <div class="dialogueMessage">
-            [{{dialogue.unreadNum}}条]{{dialogue.MessageText}}
-            <div class="MessageTime">{{dialogue.MessageTime}}</div>
+            [{{dialogue.unreadNum}}条]{{dialogue.lastMessage}}
+            <div class="MessageTime">{{dialogue.time}}</div>
           </div>
-        </router-link>
-      </div>
+        </div>
+      </router-link>
     </div>
     <Footer :imagesUrl="imagesUrl"></Footer>
   </div>
@@ -86,17 +86,22 @@ export default {
         shopping: "../static/icon/shoppinga.png",
         my: "../static/icon/mya.png"
       },
-      dialogueList: [
-        {
-          dialogueName: "小店客服",
-          unreadNum: "3条",
-          MessageText: "最后一条消息内容",
-          MessageTime: "12:00"
-        }
-      ]
+      paperlist: []
     };
   },
   name: "Message",
+  created() {
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/chat?userid=user2",
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+      })
+      .catch(e => {});
+  },
   components: {
     Footer
   }

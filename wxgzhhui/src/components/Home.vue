@@ -363,14 +363,13 @@ export default {
       ]
     };
   },
-  name: "home",
   components: {
     Footer
   },
   created() {
     this.$http
       .post(
-        "http://47.100.137.237:8093/store/home?userid=1",
+        "http://47.100.137.237:8093/store/home?userid=2",
         {},
         { emulateJSON: true }
       )

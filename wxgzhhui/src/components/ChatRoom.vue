@@ -4,7 +4,7 @@
   padding: 0px;
 }
 body {
-  background-color: #2c3e50;
+  /* background-color: #2c3e50; */
 }
 /* 头部 */
 .messageHead {
@@ -99,19 +99,21 @@ body {
       <router-link :to="{path: '/Message'}">
         <img class="retreat" src="../../static/icon/retreat.png" />
       </router-link>
-      <p style="text-align: center;padding-top: 15px">小店客服</p>
+      <p style="text-align: center;padding-top: 15px">{{dialogueUser.userName}}</p>
       <img class="opposite" src="../../static/icon/opposite.png" />
     </div>
-    <div class="messageList">
-      <div class="message"  v-for="(message,i) in MessageList" >
-        <img :src="message.sead=='客服'?'../../static/a.jpg':'../../static/b.jpg'" :style="message.sead=='客服'?'left:2vw':'right:2vw'" />
-        <div class="messageContent" :style="message.sead=='客服'?'float:left;left:14vw':'float:right;right:14vw'" >{{message.content}}</div>
+    <div class="messageList" >
+      <div class="message"  v-for="(message,i) in paperlist" >
+        <img :src="message.sendId==dialogueUser.userId?dialogueUser.portrait:'../../static/b.jpg'" 
+            :style="message.sendId==dialogueUser.userId?'left:2vw':'right:2vw'" />
+        <div class="messageContent" :style="message.sendId==dialogueUser.userId?'float:left;left:14vw':'float:right;right:14vw'" >
+          {{message.dialogueText}}</div>
       </div>
     </div>
     <div id="vacancy"></div>
     <div class="inputField">
-      <input type="text" class="inputBox"/>
-      <input type="button" class="seadText" value="发送"/>
+      <input type="text" v-model="sendText" class="inputBox" @keyup.enter="addDialogue"/>
+      <input type="button" class="seadText" value="发送" @click="addDialogue"/>
     </div>
   </div>
 </template>
@@ -121,41 +123,73 @@ import Footer from "@/components/FooterButton";
 export default {
   data() {
     return {
-      MessageList: [
-        {
-          sead: "客服",
-          receive: "我",
-          content: "你好你好你好你好你好"
-        },
-        {
-          sead: "客服",
-          receive: "我",
-          content: "你好"
-        },
-        {
-          sead: "客服",
-          receive: "我",
-          content: "你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好"
-        },
-        {
-          sead: "我",
-          receive: "客服",
-          content: "你好你好你好你好你好"
-        },
-        {
-          sead: "我",
-          receive: "客服",
-          content: "你好"
-        },
-        {
-          sead: "我",
-          receive: "客服",
-          content: "你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好"
-        }
-      ]
+      // 对话另一方id
+      dialogueUserId:"",
+      dialogueUser:[],
+      sendText:"",
+      intervalId: "", //计时器
+      paperlist: []
     };
   },
-  name: "App",
+  name: "ChatRoom",
+  created() {
+    // 获取对话另一方id
+    this.dialogueUserId = this.$route.query.dialogueUserId;
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/chat/dialogue?userid=user2&dialogueUserId="+this.dialogueUserId,
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+      })
+      .catch(e => {});
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/my/info?userid="+this.dialogueUserId,
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.dialogueUser = result.data;
+        this.diaImage=this.dialogueUser.portrait;
+      })
+      .catch(e => {});
+  },
+  methods: {
+    addDialogue(){
+      if(this.sendText!=""){
+        this.$http
+          .post(
+            "http://47.100.137.237:8093/store/chat/add?userid=user2&receptionid="+this.dialogueUserId+"&text="+this.sendText,
+            {},
+            { emulateJSON: true }
+          )
+          .then(result => {
+          })
+          .catch(e => {});
+        this.sendText="";
+      }else{
+        alert("a");
+      }
+    },
+    refresh(){
+      this.$http
+      .post(
+        "http://47.100.137.237:8093/store/chat/dialogue?userid=user2&dialogueUserId="+this.dialogueUserId,
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+      })
+      .catch(e => {});
+    },
+  },
+  mounted() {
+    this.intervalId = setInterval(this.refresh, 1000);
+  },
   components: {
     Footer
   }
