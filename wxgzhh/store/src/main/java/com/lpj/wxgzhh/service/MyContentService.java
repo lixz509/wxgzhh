@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyConvertService {
+public class MyContentService {
 
     @Autowired
     private StoreUserRepository SUR;

@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="textmessage" />
+        <module name="weixin" />
         <module name="commons" />
         <module name="store" />
-        <module name="textmessage" />
         <module name="subscribe" />
-        <module name="weixin" />
       </profile>
     </annotationProcessing>
   </component>

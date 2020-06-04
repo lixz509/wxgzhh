@@ -20,7 +20,7 @@ import java.util.TreeSet;
 import static com.lpj.wxgzhh.domain.StoreDialogue.dialogueState.IS_UNREAD;
 
 @Service
-public class ChatConvertService {
+public class ChatContentService {
 
     @Autowired
     private DialogueRepository DR;
@@ -29,6 +29,7 @@ public class ChatConvertService {
     private StoreUserRepository SUR;
 
     // 根据用户id查询消息
+    // 用户列表展示
     public String messageListShow(String userId){
         ChatListDto chatListDto=new ChatListDto();
         // 分别查询接收者和发送者为该用户的消息，从中获取对话对象用户id
@@ -58,6 +59,7 @@ public class ChatConvertService {
 
     // 根据用户及会话对象id查询聊天记录
     // 并且将未读状态刷新
+    // 用户对话展示
     public String messageShow(String userId,String dialogueUserId){
         // SerializerFeature.DisableCircularReferenceDetect表示加载相同数据时不折叠
         String json= JSON.toJSONString(DR.findByReceptionIdAndSendId(userId,dialogueUserId),
@@ -67,7 +69,7 @@ public class ChatConvertService {
     }
 
     // 增加消息
-    public String AddChat(String userId,String receptionId,String text){
+    public void AddChat(String userId,String receptionId,String text){
         StoreDialogue storeDialogue=new StoreDialogue();
         storeDialogue.setSendId(userId);
         storeDialogue.setReceptionId(receptionId);
@@ -75,7 +77,6 @@ public class ChatConvertService {
         storeDialogue.setDialogueState(IS_UNREAD);
         storeDialogue.setDialogueTime(new Date());
         DR.save(storeDialogue);
-        return "ok";
     }
 
 }

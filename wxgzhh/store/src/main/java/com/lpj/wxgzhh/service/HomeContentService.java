@@ -12,7 +12,6 @@ import com.lpj.wxgzhh.repository.HotSaleRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,9 +20,9 @@ import static com.lpj.wxgzhh.domain.StoreHotSale.hotSaleState.IS_HOTSALE;
 import static com.lpj.wxgzhh.domain.StoreHotSale.hotSaleState.IS_SLIDESHOW;
 
 @Service
-public class HomeConvertService {
+public class HomeContentService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(HomeConvertService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HomeContentService.class);
 
     @Autowired
     private HotSaleRepository HSR;
@@ -34,7 +33,7 @@ public class HomeConvertService {
     @Autowired
     private ClassifyRepository CLR;
 
-
+    // 首页内容展示
     public String homeShow(){
 //        String json= JSON.toJSONString(s);
 //        JSONArray jsonArray = JSONArray.fromArray(new ArrayList[]{slideshowCommodity});

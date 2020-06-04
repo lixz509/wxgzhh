@@ -2,27 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="添加相应表，首页获取数据改为从后台">
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/ChatListDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ChatConvertController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyConvertController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/DialogueRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/StoreUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ChatConvertService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyConvertService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ShoppingTrolleyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ShoppingTrolleyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreDialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreDialogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreDialogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreDialogue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeConvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeConvertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ClassifyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ClassifyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/CommodityRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/CommodityRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/HomeConvertService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/HomeConvertService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Message.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Message.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ChatConvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ChatContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeConvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyConvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ChatConvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ChatContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeConvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyConvertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyContentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -394,7 +384,8 @@
       <workItem from="1591089213857" duration="3014000" />
       <workItem from="1591110412541" duration="7349000" />
       <workItem from="1591122307301" duration="615000" />
-      <workItem from="1591169679136" duration="3487000" />
+      <workItem from="1591169679136" duration="5050000" />
+      <workItem from="1591281248301" duration="4046000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -662,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589904846674</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="添加对话处理模块后端">
+      <created>1591173836634</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1591173836634</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="增加获取token，加入注释" />
     <MESSAGE value="使用TextMessage模块回复1" />
     <MESSAGE value="使用TextMessage模块回复2" />
     <MESSAGE value="使用TextMessage模块回复3" />
@@ -708,7 +705,8 @@
     <MESSAGE value="重置按钮2" />
     <MESSAGE value="重置按钮4" />
     <MESSAGE value="自动创建相应表" />
-    <option name="LAST_COMMIT_MESSAGE" value="自动创建相应表" />
+    <MESSAGE value="添加对话处理模块后端" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加对话处理模块后端" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1589904880739">
@@ -735,50 +733,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1590316472981">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1591173835896">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590316472981" />
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1591173706463">
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591173835896" />
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
-    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1591173706463">
+    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1591285368807">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591173706463" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591285368807" />
     <state x="270" y="55" key="SettingsEditor" timestamp="1589904806075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1590315070015">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591173844284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590315070015" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591173844284" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1591090046861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
