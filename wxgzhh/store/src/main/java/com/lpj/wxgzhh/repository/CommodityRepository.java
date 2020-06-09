@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 @Repository
 public interface CommodityRepository extends JpaRepository<StoreCommodity, String> {
+
     StoreCommodity findByCommodityId(String CommodityId);
 
     // nativeQuery=true表示使用sql原生语句不使用hql

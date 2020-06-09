@@ -6,15 +6,13 @@ import com.lpj.wxgzhh.domain.StoreDialogue;
 import com.lpj.wxgzhh.domain.StoreUser;
 import com.lpj.wxgzhh.domain.dto.ChatListDto;
 import com.lpj.wxgzhh.repository.DialogueRepository;
+import com.lpj.wxgzhh.repository.OrderRepository;
 import com.lpj.wxgzhh.repository.StoreUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.TreeSet;
 
 import static com.lpj.wxgzhh.domain.StoreDialogue.dialogueState.IS_UNREAD;
@@ -62,7 +60,7 @@ public class ChatContentService {
     // 用户对话展示
     public String messageShow(String userId,String dialogueUserId){
         // SerializerFeature.DisableCircularReferenceDetect表示加载相同数据时不折叠
-        String json= JSON.toJSONString(DR.findByReceptionIdAndSendId(userId,dialogueUserId),
+        String json= JSON.toJSONString(DR.findDialogueByReceptionIdAndSendId(userId,dialogueUserId),
                 SerializerFeature.DisableCircularReferenceDetect);
         System.out.println(DR.saveState(userId,dialogueUserId));
         return json;

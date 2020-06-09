@@ -34,7 +34,7 @@ public interface DialogueRepository extends JpaRepository<StoreDialogue, String>
     // 根据发送者id和接收者id查询所有消息
     @Query(value = "select  * from store_dialogue where (reception_id=:receptionId and send_id=:sendId) " +
             "or (reception_id=:sendId and send_id=:receptionId) Order By dialogue_time ASC", nativeQuery=true)
-    ArrayList<StoreDialogue> findByReceptionIdAndSendId(@Param("receptionId")String receptionId,@Param("sendId")String sendId);
+    ArrayList<StoreDialogue> findDialogueByReceptionIdAndSendId(@Param("receptionId")String receptionId, @Param("sendId")String sendId);
 
     // 根据发送者id和接收者id将未读状态更新
     @Transactional

@@ -8,7 +8,7 @@ public class ChatListDto {
 
     public static class ChatDto{
         private int unreadNum;
-        private  String dialogueUserId;
+        private String dialogueUserId;
         private String lastMessage;
         private String dialogueName;
         private String time;

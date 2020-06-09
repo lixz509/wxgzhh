@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="store_order") // 指定表名，若不指定，默认表名为类名
 public class StoreOrder {
 
-    public static enum orderStatus{
+    public static enum orderState{
         // 待付款
         IS_PAYMENT,
         // 待发货
@@ -42,6 +42,10 @@ public class StoreOrder {
     @JsonProperty("user_id")
     private String userId;
 
+    // 采购量
+    @JsonProperty("purchase_quantity")
+    private String purchaseQuantity;
+
     // 订购时间
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderTime;
@@ -53,7 +57,7 @@ public class StoreOrder {
     // 订单状态
     @JsonProperty("order_state")
     @Enumerated(EnumType.STRING)
-    private orderStatus orderStatus;
+    private orderState orderState;
 
     public String getOrderId() {
         return orderId;
@@ -79,6 +83,14 @@ public class StoreOrder {
         this.userId = userId;
     }
 
+    public String getPurchaseQuantity() {
+        return purchaseQuantity;
+    }
+
+    public void setPurchaseQuantity(String purchaseQuantity) {
+        this.purchaseQuantity = purchaseQuantity;
+    }
+
     public Date getOrderTime() {
         return orderTime;
     }
@@ -95,11 +107,11 @@ public class StoreOrder {
         this.totalPrice = totalPrice;
     }
 
-    public StoreOrder.orderStatus getOrderStatus() {
-        return orderStatus;
+    public StoreOrder.orderState getOrderState() {
+        return orderState;
     }
 
-    public void setOrderStatus(StoreOrder.orderStatus orderStatus) {
-        this.orderStatus = orderStatus;
+    public void setOrderState(StoreOrder.orderState orderState) {
+        this.orderState = orderState;
     }
 }
