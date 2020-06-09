@@ -5,7 +5,7 @@
   padding: 0px;
 }
 body {
-  background-color: #2c3e50;
+  background-color: #f6f6f6;
 }
 #searchFrame2 {
   position:fixed;

@@ -4,6 +4,7 @@
   padding: 0px;
 }
 body {
+  background-color: #f6f6f6;
   /* background-color: #2c3e50; */
 }
 /* 头部 */

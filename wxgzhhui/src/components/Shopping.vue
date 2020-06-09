@@ -4,7 +4,8 @@
   padding: 0px;
 }
 body {
-  background-color: #2c3e50;
+  background-color: #f6f6f6;
+  /* background-color: #2c3e50; */
 }
 /* 头部 */
 .shoppingHead {
@@ -18,30 +19,32 @@ body {
   font-weight: bolder;
 }
 /* 商品列表 */
-.productList{
+.productList {
   position: relative;
   width: 100vw;
 }
-.product{
+.product {
   position: relative;
   width: 100vw;
   height: 30vw;
-  background:yellow;
+  background-color: white;
 }
-.checkboxa{
+.checkboxa {
   position: absolute;
   /* background-color: blue; */
-  width: 10vw;
-  height: 30vw;
+  left: 4vw;
+  top: 10vw;
+  width: 5vw;
+  height: 5vw;
 }
-.product img{
+.product img {
   position: absolute;
   left: 12vw;
   top: 3vw;
   width: 20vw;
   height: 20vw;
 }
-.productText{
+.productText {
   position: absolute;
   width: 64vw;
   height: 8vw;
@@ -53,56 +56,70 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow:hidden;
-  letter-spacing:0.3vw;
+  overflow: hidden;
+  letter-spacing: 0.3vw;
 }
-.productPrice{
+.productPrice {
   position: absolute;
   left: 36vw;
   top: 20vw;
   font-size: 3.5vw;
 }
-.productCancel{
-  position: absolute;
-  right: 8vw;
-  top: 10vw;
+.productSubtract {
+  position: relative;
+  background-color: #b0c4de;
+  display: inline-block;
+  width: 3vw;
+  text-align: center;
 }
-.commoditNum{
+.productAdd {
+  position: relative;
+  background-color: #b0c4de;
+  display: inline-block;
+  width: 3vw;
+  text-align: center;
+}
+.commoditNum {
   position: absolute;
+  width: 15vw;
+  height: 5vw;
   top: 20vw;
   right: 5vw;
   font-size: 3.5vw;
 }
 /* 结算 */
-.settlement{
+.settlement {
   position: fixed;
+  z-index: 5;
   width: 100vw;
   height: 60px;
   bottom: 60px;
   background-color: aqua;
 }
-.checkboxb{
+.checkboxb {
   position: absolute;
   /* background-color: blue; */
-  width: 10vw;
-  height: 60px;
+  left: 4vw;
+  top: calc((60px - 7vw) / 2);
+  width: 5vw;
+  height: 5vw;
 }
-.settlementP{
+.settlementP {
   position: absolute;
   left: 12vw;
-  top: calc((60px - 7vw)/2);
+  top: calc((60px - 7vw) / 2);
   font-size: 5vw;
 }
-.settlementBtn{
+.settlementBtn {
   position: absolute;
   right: 5vw;
-  top: calc((60px - 7vw)/2);
+  top: calc((60px - 7vw) / 2);
   width: 12vw;
   font-size: 5vw;
 }
-.settlementPrice{
+.settlementPrice {
   position: absolute;
-  top: calc((60px - 6vw)/2);
+  top: calc((60px - 6vw) / 2);
   right: 19vw;
   font-size: 4vw;
 }
@@ -120,20 +137,34 @@ body {
       <p style="text-align: center;padding-top: 15px">购物车</p>
     </div>
     <div class="productList">
-      <div class="product" v-for="(product,i) in productList" >
-        <div class="checkboxa"></div>
-        <img :src="product.productUrl"/>
-        <div class="productText">{{product.productText}}</div>
-        <div class="productPrice">{{product.productPrice}}</div>
-        <div class="productCancel">-</div>
-        <div class="commoditNum">{{product.commoditNum}}</div>
+      <div class="product" v-for="(product,i) in paperlist">
+        <input
+          class="checkboxa"
+          type="checkbox"
+          v-model="settlement"
+          :value="product.shoppingTrolleyId"
+        />
+        <img :src="product.showUrl" />
+        <div class="productText">{{product.commodityName}}</div>
+        <div class="productPrice">{{product.price}}</div>
+        <div class="commoditNum">
+          <div
+            class="productSubtract"
+            @click="reviseNum(product.shoppingTrolleyId,parseInt(product.quantity)-1,i)"
+          >-</div>
+          {{product.quantity}}
+          <div
+            class="productAdd"
+            @click="reviseNum(product.shoppingTrolleyId,parseInt(product.quantity)+1,i)"
+          >+</div>
+        </div>
       </div>
     </div>
-    <div class="settlement">
-      <div class="checkboxb"></div>
+    <div class="settlement" >
+      <input class="checkboxb" @click="checkboxAll()" type="checkbox" v-model="checked" />
       <div class="settlementP">全选</div>
-      <div class="settlementPrice">合计:9998888</div>
-      <input type="button" class="settlementBtn" value="结算" />
+      <div class="settlementPrice">合计:{{paymentAmount}}</div>
+      <input type="button" class="settlementBtn" @click="settlementAccounts()" value="结算" />
     </div>
     <div id="vacancy"></div>
     <Footer :imagesUrl="imagesUrl"></Footer>
@@ -151,49 +182,103 @@ export default {
         shopping: "../static/icon/shoppingb.png",
         my: "../static/icon/mya.png"
       },
-      productList:[
-        {
-          productUrl:"../static/c.jpg",
-          productText:"这是个商品这是品",
-          productPrice:"99",
-          commoditNum:"1"
-        },
-        {
-          productUrl:"../static/b.jpg",
-          productText:"这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品",
-          productPrice:"97",
-          commoditNum:"2"
-        },
-        {
-          productUrl:"../static/b.jpg",
-          productText:"这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品",
-          productPrice:"90",
-          commoditNum:"4"
-        },
-        {
-          productUrl:"../static/c.jpg",
-          productText:"这是个商品这是品",
-          productPrice:"99",
-          commoditNum:"1"
-        },
-        {
-          productUrl:"../static/b.jpg",
-          productText:"这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品",
-          productPrice:"97",
-          commoditNum:"2"
-        },
-        {
-          productUrl:"../static/b.jpg",
-          productText:"这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品这是个商品",
-          productPrice:"90",
-          commoditNum:"4"
-        },
-      ]
+      paperlist: [],
+      intervalId: "", //计时器
+      paymentAmount: 0,
+      checked: false, //设置全选按钮默认布尔值
+      settlement: [],
+      orderId:[]
     };
   },
   name: "Shopping",
   components: {
     Footer
+  },
+  created() {
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/shopping?userid=user2",
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+      })
+      .catch(e => {});
+  },
+  methods: {
+    reviseNum(shoppingTrolleyId, num, i) {
+      if (num > 0) {
+        this.$http
+          .post(
+            "http://47.100.137.237:8093/store/shopping/number?shoppingTrolleyId=" +
+              shoppingTrolleyId +
+              "&num=" +
+              num,
+            {},
+            { emulateJSON: true }
+          )
+          .then(result => {})
+          .catch(e => {});
+      }
+    },
+    checkboxAll() {
+      if (this.checked) {
+        this.settlement = [];
+      } else {
+        this.settlement = [];
+        for (var i = 0; i < this.paperlist.length; i++) {
+          this.settlement[i] = this.paperlist[i].shoppingTrolleyId;
+        }
+      }
+    },
+    settlementAccounts() {
+      if (this.settlement.length != 0) {
+        for (var i = 0; i < this.settlement.length; i++) {
+          this.$http
+            .post(
+              "http://47.100.137.237:8093/store/shopping/order?shoppingTrolleyId=" +
+                this.settlement[i],
+              {},
+              { emulateJSON: true }
+            )
+            .then(result => {
+              this.orderId.push(result.data);
+            })
+            .catch(e => {});
+        }
+      };
+      this.$router.push({name:"Payment",params:{orderId:this.orderId}});
+    },
+    refresh() {
+      this.paymentAmount = 0;
+      for (var i = 0; i < this.paperlist.length; i++) {
+        if (
+          this.settlement.indexOf(this.paperlist[i].shoppingTrolleyId) != -1
+        ) {
+          this.paymentAmount =
+            this.paymentAmount +
+            this.paperlist[i].quantity * this.paperlist[i].price;
+        }
+      }
+      this.$http
+        .post(
+          "http://47.100.137.237:8093/store/shopping?userid=user2",
+          {},
+          { emulateJSON: true }
+        )
+        .then(result => {
+          this.paperlist = result.data;
+        })
+        .catch(e => {});
+    }
+  },
+  mounted() {
+    this.intervalId = setInterval(this.refresh, 1000);
+  },
+  beforeDestroy() {
+    // 销毁定时器
+    this.intervalId = "";
   }
 };
 </script>

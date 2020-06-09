@@ -4,7 +4,7 @@
   padding: 0px;
 }
 body {
-  background-color:aliceblue;
+  background-color:#f6f6f6;
 }
 /* 轮播图样式 */
 #slideshow {

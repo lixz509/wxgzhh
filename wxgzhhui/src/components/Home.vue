@@ -5,7 +5,7 @@
   padding: 0px;
 }
 body {
-  background-color: aliceblue;
+  background-color: #f6f6f6;
 }
 #searchFrame {
   position: relative;
@@ -90,7 +90,7 @@ body {
   width: 100vw;
   height: 65vw;
   overflow: hidden;
-  background-color: blanchedalmond;
+  background-color: #f6f6f6;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -124,7 +124,7 @@ body {
   width: 100vw;
   height: 50vw;
   overflow: hidden;
-  background-color: blanchedalmond;
+  background-color: #f1fafa;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -183,7 +183,7 @@ body {
   position: relative;
   width: 100vw;
   height: 30vw;
-  background-color: seashell;
+  background-color: #F5FFFA;
 }
 .selection img {
   height: 30vw;
@@ -369,7 +369,7 @@ export default {
   created() {
     this.$http
       .post(
-        "http://47.100.137.237:8093/store/home?userid=2",
+        "http://47.100.137.237:8093/store/home?userid=user2",
         {},
         { emulateJSON: true }
       )

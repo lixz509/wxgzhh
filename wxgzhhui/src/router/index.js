@@ -9,6 +9,7 @@ import Search from "@/components/Search"
 import ChatRoom from "@/components/ChatRoom"
 import Commodity from "@/components/Commodity"
 import CommodityDetails from "@/components/CommodityDetails"
+import Payment from "@/components/Payment"
 
 Vue.use(Router)
 
@@ -63,6 +64,11 @@ export default new Router({
       path: '/CommodityDetails',
       name: 'CommodityDetails',
       component: CommodityDetails
+    },
+    {
+      path: '/Payment/:orderId',
+      name: 'Payment',
+      component: Payment
     },
   ]
 })

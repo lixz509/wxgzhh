@@ -4,7 +4,7 @@
   padding: 0px;
 }
 body {
-  background-color: #f1fafa;
+  background-color: #f6f6f6;
 }
 /* 头部 */
 .messageHead {
