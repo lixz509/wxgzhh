@@ -10,6 +10,15 @@ import ChatRoom from "@/components/ChatRoom"
 import Commodity from "@/components/Commodity"
 import CommodityDetails from "@/components/CommodityDetails"
 import Payment from "@/components/Payment"
+import Order from "@/components/Order"
+import Balance from "@/components/Balance"
+import Task from "@/components/Task"
+import Favorite from "@/components/Favorite"
+import Address from "@/components/Address"
+import Security from "@/components/Security"
+import Information from "@/components/Information"
+import AboutUs from "@/components/AboutUs"
+import ChatUserInfo from "@/components/ChatUserInfo"
 
 Vue.use(Router)
 
@@ -69,6 +78,51 @@ export default new Router({
       path: '/Payment/:orderId',
       name: 'Payment',
       component: Payment
+    },
+    {
+      path: '/Order',
+      name: 'Order',
+      component: Order
+    },
+    {
+      path: '/Balance',
+      name: 'Balance',
+      component: Balance
+    },
+    {
+      path: '/Task',
+      name: 'Task',
+      component: Task
+    },
+    {
+      path: '/Favorite',
+      name: 'Favorite',
+      component: Favorite
+    },
+    {
+      path: '/Address',
+      name: 'Address',
+      component: Address
+    },
+    {
+      path: '/Security',
+      name: 'Security',
+      component: Security
+    },
+    {
+      path: '/Information',
+      name: 'Information',
+      component: Information
+    },
+    {
+      path: '/AboutUs',
+      name: 'AboutUs',
+      component: AboutUs
+    },
+    {
+      path: '/ChatUserInfo',
+      name: 'ChatUserInfo',
+      component: ChatUserInfo
     },
   ]
 })

@@ -193,13 +193,15 @@ body {
   position: absolute;
   left: 35vw;
   top: 5vw;
-  width: 65vw;
+  width: 63vw;
   font-size: 4vw;
   overflow: hidden;
   text-align: left;
   height: 4vw;
   line-height: 4vw;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 .selectionParticulars {
   position: absolute;
@@ -266,7 +268,7 @@ body {
       </router-link>
     </div>
     <div id="slideshow">
-      <!-- <router-link :to="{path: '/CommodityDetails'}"> </router-link> -->
+      <router-link :to="{path: '/CommodityDetails'}">
       <img class="leftarrows" src="../../static/icon/left.png" @click="leftarrows" />
       <img class="rigtharrows" src="../../static/icon/right.png" @click="rigtharrows" />
       <div id="ball">
@@ -289,6 +291,7 @@ body {
           :src="slideshow.particularsUrl"
         />
       </div>
+       </router-link>
     </div>
 
     <div class="classifys">

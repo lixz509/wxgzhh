@@ -247,8 +247,8 @@ export default {
             })
             .catch(e => {});
         }
+        this.$router.push({name:"Payment",params:{orderId:this.orderId}});
       };
-      this.$router.push({name:"Payment",params:{orderId:this.orderId}});
     },
     refresh() {
       this.paymentAmount = 0;

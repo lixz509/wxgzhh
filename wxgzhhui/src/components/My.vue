@@ -7,7 +7,7 @@ body {
   background-color: #f6f6f6;
 }
 .headPortrait {
-  position:relative;
+  position: relative;
   top: 0;
   margin-top: 0px;
   height: 25vw;
@@ -31,7 +31,7 @@ body {
   transform: translate(-50%);
 }
 .order {
-  position:relative;
+  position: relative;
   text-align: center;
   top: 3vw;
   height: 32vw;
@@ -70,7 +70,7 @@ body {
   font-size: 3vw;
 }
 .task {
-  position:relative;
+  position: relative;
   top: 5vw;
   height: 40vw;
   width: 100vw;
@@ -92,7 +92,7 @@ body {
   height: 4vw;
 }
 .information {
-  position:relative;
+  position: relative;
   top: 5vw;
   height: 30vw;
   width: 100vw;
@@ -116,7 +116,7 @@ body {
   height: 4vw;
 }
 .aboutUs {
-  position:relative;
+  position: relative;
   top: 5vw;
   height: 13vw;
   width: 100vw;
@@ -128,10 +128,10 @@ body {
 <template>
   <div id="my">
     <div class="headPortrait">
-      <img :src="user.headPortrait" />
-      <div class="name">{{user.Name}}</div>
+      <img :src="portrait" />
+      <div class="name">{{userName}}</div>
     </div>
-    <div class="order">
+    <div class="order" @click="jump('Order')" >
       <div class="orderP">我的订单</div>
       <div class="orderSpan">查看全部订单&gt;</div>
       <img src="../../static/icon/payment.png" />
@@ -149,36 +149,36 @@ body {
     </div>
     <div class="task">
       <ul>
-        <li>
+        <li @click="jump('Balance')">
           <img src="../../static/icon/balance.png" />&ensp;余额
         </li>
-        <li>
+        <li @click="jump('Task')">
           <img src="../../static/icon/task.png" />&ensp;任务中心
         </li>
-        <li>
+        <li @click="jump('Favorite')">
           <img src="../../static/icon/favorite.png" />&ensp;收藏夹
         </li>
-        <li>
+        <li @click="jump('Shopping')">
           <img src="../../static/icon/shoppingc.png" />&ensp;购物车
         </li>
       </ul>
     </div>
     <div class="information">
       <ul>
-        <li>
+        <li @click="jump('Address')">
           <img src="../../static/icon/location.png" />&ensp;收货地址
         </li>
-        <li>
+        <li @click="jump('Security')">
           <img src="../../static/icon/security.png" />&ensp;账号与安全
         </li>
-        <li>
+        <li @click="jump('Information')">
           <img src="../../static/icon/information.png" />&ensp;个人信息
         </li>
       </ul>
     </div>
     <div class="aboutUs">
       <ul>
-        <li>
+        <li @click="jump('AboutUs')">
           <img src="../../static/icon/aboutUs.png" />&ensp;关于我们
         </li>
       </ul>
@@ -198,14 +198,30 @@ export default {
         shopping: "../static/icon/shoppinga.png",
         my: "../static/icon/myb.png"
       },
-      user: {
-        headPortrait: "../static/a.jpg",
-        Name: "lpj"
-      }
+      userName: "",
+      portrait: ""
     };
   },
   components: {
     Footer
   },
+  created() {
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/my/info?userid=user2",
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.userName = result.data.userName;
+        this.portrait = result.data.portrait;
+      })
+      .catch(e => {});
+  },
+  methods: {
+    jump(event) {
+      this.$router.push({ name: event });
+    }
+  }
 };
 </script>

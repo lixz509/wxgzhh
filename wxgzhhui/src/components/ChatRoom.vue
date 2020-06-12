@@ -33,15 +33,15 @@ body {
 }
 /* 消息列表 */
 .messageList {
-  position:relative;
+  position: relative;
   width: 100vw;
-  display:inline-block; 
+  display: inline-block;
 }
 .message {
   position: relative;
   width: 100vw;
   margin-top: 2vw;
-  float:right;
+  float: right;
 }
 .message img {
   position: absolute;
@@ -50,14 +50,14 @@ body {
   height: 10vw;
 }
 .messageContent {
-  position:relative;
+  position: relative;
   background: white;
   max-width: 72vw;
   line-height: 10vw;
   border-radius: 2vw;
-  letter-spacing:0.3vw;
+  letter-spacing: 0.3vw;
   font-size: 4.8vw;
-  display:inline-block; 
+  display: inline-block;
 }
 /* 输入框 */
 .inputField {
@@ -66,9 +66,9 @@ body {
   z-index: 999;
   height: 60px;
   width: 100vw;
-  background-color:lavender;
+  background-color: lavender;
 }
-.inputBox{
+.inputBox {
   margin-top: 8px;
   margin-left: 7vw;
   height: 40px;
@@ -76,15 +76,15 @@ body {
   line-height: 40px;
   font-size: 4.8vw;
 }
-.seadText{
- position: absolute;
- top:8px;
- height: 40px;
- background: yellowgreen;
- color: white;
- right: 2vw;
- font-size: 4vw;
- width: 16vw;
+.seadText {
+  position: absolute;
+  top: 8px;
+  height: 40px;
+  background: yellowgreen;
+  color: white;
+  right: 2vw;
+  font-size: 4vw;
+  width: 16vw;
 }
 /* 填补空缺 */
 #vacancy {
@@ -101,20 +101,26 @@ body {
         <img class="retreat" src="../../static/icon/retreat.png" />
       </router-link>
       <p style="text-align: center;padding-top: 15px">{{dialogueUser.userName}}</p>
-      <img class="opposite" src="../../static/icon/opposite.png" />
+      <router-link :to="{path: '/ChatUserInfo',query:{dialogueUserId:dialogueUserId}}">
+        <img class="opposite" src="../../static/icon/opposite.png" />
+      </router-link>
     </div>
-    <div class="messageList" >
-      <div class="message"  v-for="(message,i) in paperlist" >
-        <img :src="message.sendId==dialogueUser.userId?dialogueUser.portrait:'../../static/b.jpg'" 
-            :style="message.sendId==dialogueUser.userId?'left:2vw':'right:2vw'" />
-        <div class="messageContent" :style="message.sendId==dialogueUser.userId?'float:left;left:14vw':'float:right;right:14vw'" >
-          {{message.dialogueText}}</div>
+    <div class="messageList">
+      <div class="message" v-for="(message,i) in paperlist">
+        <img
+          :src="message.sendId==dialogueUser.userId?dialogueUser.portrait:'../../static/b.jpg'"
+          :style="message.sendId==dialogueUser.userId?'left:2vw':'right:2vw'"
+        />
+        <div
+          class="messageContent"
+          :style="message.sendId==dialogueUser.userId?'float:left;left:14vw':'float:right;right:14vw'"
+        >{{message.dialogueText}}</div>
       </div>
     </div>
     <div id="vacancy"></div>
     <div class="inputField">
-      <input type="text" v-model="sendText" class="inputBox" @keyup.enter="addDialogue"/>
-      <input type="button" class="seadText" value="发送" @click="addDialogue"/>
+      <input type="text" v-model="sendText" class="inputBox" @keyup.enter="addDialogue" />
+      <input type="button" class="seadText" value="发送" @click="addDialogue" />
     </div>
   </div>
 </template>
@@ -125,9 +131,9 @@ export default {
   data() {
     return {
       // 对话另一方id
-      dialogueUserId:"",
-      dialogueUser:[],
-      sendText:"",
+      dialogueUserId: "",
+      dialogueUser: [],
+      sendText: "",
       intervalId: "", //计时器
       paperlist: []
     };
@@ -138,7 +144,8 @@ export default {
     this.dialogueUserId = this.$route.query.dialogueUserId;
     this.$http
       .post(
-        "http://47.100.137.237:8093/store/chat/dialogue?userid=user2&dialogueUserId="+this.dialogueUserId,
+        "http://47.100.137.237:8093/store/chat/dialogue?userid=user2&dialogueUserId=" +
+          this.dialogueUserId,
         {},
         { emulateJSON: true }
       )
@@ -148,45 +155,49 @@ export default {
       .catch(e => {});
     this.$http
       .post(
-        "http://47.100.137.237:8093/store/my/info?userid="+this.dialogueUserId,
+        "http://47.100.137.237:8093/store/my/info?userid=" +
+          this.dialogueUserId,
         {},
         { emulateJSON: true }
       )
       .then(result => {
         this.dialogueUser = result.data;
-        this.diaImage=this.dialogueUser.portrait;
+        this.diaImage = this.dialogueUser.portrait;
       })
       .catch(e => {});
   },
   methods: {
-    addDialogue(){
-      if(this.sendText!=""){
+    addDialogue() {
+      if (this.sendText != "") {
         this.$http
           .post(
-            "http://47.100.137.237:8093/store/chat/add?userid=user2&receptionid="+this.dialogueUserId+"&text="+this.sendText,
+            "http://47.100.137.237:8093/store/chat/add?userid=user2&receptionid=" +
+              this.dialogueUserId +
+              "&text=" +
+              this.sendText,
             {},
             { emulateJSON: true }
           )
-          .then(result => {
-          })
+          .then(result => {})
           .catch(e => {});
-        this.sendText="";
-      }else{
+        this.sendText = "";
+      } else {
         alert("a");
       }
     },
-    refresh(){
+    refresh() {
       this.$http
-      .post(
-        "http://47.100.137.237:8093/store/chat/dialogue?userid=user2&dialogueUserId="+this.dialogueUserId,
-        {},
-        { emulateJSON: true }
-      )
-      .then(result => {
-        this.paperlist = result.data;
-      })
-      .catch(e => {});
-    },
+        .post(
+          "http://47.100.137.237:8093/store/chat/dialogue?userid=user2&dialogueUserId=" +
+            this.dialogueUserId,
+          {},
+          { emulateJSON: true }
+        )
+        .then(result => {
+          this.paperlist = result.data;
+        })
+        .catch(e => {});
+    }
   },
   mounted() {
     this.intervalId = setInterval(this.refresh, 1000);
