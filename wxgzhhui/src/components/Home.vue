@@ -268,7 +268,6 @@ body {
       </router-link>
     </div>
     <div id="slideshow">
-      <router-link :to="{path: '/CommodityDetails'}">
       <img class="leftarrows" src="../../static/icon/left.png" @click="leftarrows" />
       <img class="rigtharrows" src="../../static/icon/right.png" @click="rigtharrows" />
       <div id="ball">
@@ -289,17 +288,19 @@ body {
           class="carouselImg"
           v-for="(slideshow,i) in paperlist.slideShows"
           :src="slideshow.particularsUrl"
+          @click="jumpCommodityDetails(slideshow.commodityId)"
         />
       </div>
-       </router-link>
     </div>
 
     <div class="classifys">
       <img class="classifyP" src="../../static/icon/classify.jpg" />
       <div
         class="classify"
+        v-if="paperlist.classify"
         v-for="(classify,i) in paperlist.classify"
         :style="{'margin-right':(i==3||i==7?'0vw':'2vw')}"
+        @click="jumpClassify(classify.classifyId,classify.classifyName)"
       >
         <img :src="classify.classifyImage" />
         <div class="classifyText">{{classify.classifyName}}</div>
@@ -312,16 +313,17 @@ body {
         class="faddish"
         v-for="(faddish,i) in paperlist.faddish"
         :style="{'margin':(i==1?'0 2vw':'0')}"
+        @click="jumpCommodityDetails(faddish.commodityId)"
       >
-        <img :src="faddish.particularsUrl" />
+        <img :src="faddish.showUrl" />
         <div class="faddishPrice">￥{{faddish.price}}</div>
         <div class="faddishText">{{faddish.commodityName}}</div>
       </div>
     </div>
     <div class="selections">
       <img class="selectionP" src="../../static/icon/selection.jpg" />
-      <div class="selection" v-for="(selection,i) in paperlist.hotSales">
-        <img :src="selection.particularsUrl" />
+      <div class="selection" v-for="(selection,i) in paperlist.hotSales" @click="jumpCommodityDetails(selection.commodityId)">
+        <img :src="selection.showUrl" />
         <div class="selectionText">{{selection.commodityName}}</div>
         <div class="selectionParticulars">
           <div class="selectionDiscount">{{selection.discount}}折</div>
@@ -363,7 +365,8 @@ export default {
         { night: false },
         { night: false },
         { night: false }
-      ]
+      ],
+      classifyId:""
     };
   },
   components: {
@@ -482,6 +485,12 @@ export default {
         this.intervalId = setInterval(this.carousel, 3000);
         // console.log(this.endX);
       }
+    },
+    jumpClassify(classifyId,classifyName){
+      this.$router.push({name:"Classify",params:{classifyId:classifyId,classifyName:classifyName}});
+    },
+    jumpCommodityDetails(commodityId){
+      this.$router.push({name:"CommodityDetails",params:{commodityId:commodityId}});
     }
   },
   mounted() {

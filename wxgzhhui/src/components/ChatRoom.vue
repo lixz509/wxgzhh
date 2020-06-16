@@ -97,9 +97,7 @@ body {
   <div id="ChatRoom">
     <div id="vacancy"></div>
     <div class="messageHead">
-      <router-link :to="{path: '/Message'}">
-        <img class="retreat" src="../../static/icon/retreat.png" />
-      </router-link>
+      <img class="retreat" @click="retreat" src="../../static/icon/retreat.png" />
       <p style="text-align: center;padding-top: 15px">{{dialogueUser.userName}}</p>
       <router-link :to="{path: '/ChatUserInfo',query:{dialogueUserId:dialogueUserId}}">
         <img class="opposite" src="../../static/icon/opposite.png" />
@@ -197,7 +195,11 @@ export default {
           this.paperlist = result.data;
         })
         .catch(e => {});
-    }
+    },
+    // 返回上一页
+    retreat() {
+      this.$router.go(-1);
+    },
   },
   mounted() {
     this.intervalId = setInterval(this.refresh, 1000);

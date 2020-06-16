@@ -1,5 +1,4 @@
 <style>
-/* 搜索框样式 */
 * {
   margin: 0px;
   padding: 0px;
@@ -7,50 +6,23 @@
 body {
   background-color: #f6f6f6;
 }
-#searchFrame2 {
+/* 关于我们头部 */
+.classifyHeader {
   position: fixed;
-  top: 0;
-  z-index: 999;
+  background-color: antiquewhite;
+  z-index: 10;
+  top: 0vw;
   height: 60px;
   width: 100vw;
-  background-color: black;
+  font-size: 24px;
+  font-weight: bolder;
 }
-.searchimg {
+.retreat {
   position: absolute;
   top: 15px;
-  left: 20px;
-  padding-left: 8px;
+  left: 15px;
   width: 30px;
   height: 30px;
-  z-index: 2;
-  border-radius: 10px;
-}
-.searchtext {
-  position: absolute;
-  top: 7px;
-  left: 20px;
-  width: calc(100vw - 140px);
-  height: 40px;
-  z-index: 1;
-  border-radius: 10px;
-  padding-left: 40px;
-}
-.searchbtn {
-  position: absolute;
-  top: 15px;
-  right: 0vw;
-  width: 60px;
-  height: 40px;
-  border-radius: 10px;
-  font-size: 20px;
-  color: #81c16a;
-}
-.antistop {
-  display: block;
-  margin: 10px 10px;
-  float: left;
-  background-color: #f0f8ff;
-  color: #81c16a;
 }
 /* 排序选项卡 */
 .sort {
@@ -122,8 +94,8 @@ body {
   color: gray;
   text-decoration: line-through;
 }
-/* 查询没有该商品 */
-.commodityNull {
+/* 查询没有该分类 */
+.classifyNull {
   width: 100vw;
   text-align: center;
   font-size: 3.5vw;
@@ -131,35 +103,28 @@ body {
 }
 /* 填补空缺 */
 #vacancy {
+  height: 60px;
   position: relative;
 }
 </style>
 
 <template>
-  <div id="Commodity">
+  <div id="classify">
     <div id="vacancy" style="height: calc(60px + 10vw)"></div>
-    <div id="searchFrame2">
-      <img class="searchimg" src="../../static/icon/search.png" />
-      <input
-        type="text"
-        class="searchtext"
-        v-model="commodityName"
-        @keyup.enter="searchCommodity(commodityName)"
-      />
-      <router-link :to="{path: '/Home'}">
-        <div class="searchbtn">取消</div>
-      </router-link>
+    <div class="classifyHeader">
+      <img class="retreat" @click="retreat" src="../../static/icon/retreat.png" />
+      <p style="text-align: center;padding-top: 15px;">{{classifyName}}</p>
     </div>
     <div class="sort">
       <ul>
-        <li @click="searchCommoditySort(1)">销量多</li>
-        <li @click="searchCommoditySort(2)">价格低</li>
-        <li @click="searchCommoditySort(3)">价格高</li>
+        <li @click="searchClassify(1)">销量多</li>
+        <li @click="searchClassify(2)">价格低</li>
+        <li @click="searchClassify(3)">价格高</li>
       </ul>
     </div>
     <div class="commodityList">
       <div class="commodity" v-for="(commodity,i) in paperlist">
-        <img :src="commodity.showUrl" />
+        <img :src="commodity.particularsUrl" />
         <div class="commodityText">{{commodity.commodityName}}</div>
         <div class="commodityPrice">
           ￥{{commodity.price}}
@@ -167,7 +132,7 @@ body {
         </div>
       </div>
     </div>
-    <div class="commodityNull" v-show="paperlist.length == 0">查无此商品</div>
+    <div class="classifyNull" v-show="paperlist.length == 0">暂时没有该类商品</div>
   </div>
 </template>
 
@@ -175,16 +140,19 @@ body {
 export default {
   data() {
     return {
-      commodityName: "",
-      paperlist: []
+      paperlist: [],
+      classifyId: "",
+      classifyName: ""
     };
   },
   created() {
-    this.commodityName = this.$route.params.commodityName;
+    this.classifyId = this.$route.params.classifyId;
+    this.classifyName = this.$route.params.classifyName;
+    // 根据分类id查询该分类商品
     this.$http
       .post(
-        "http://47.100.137.237:8093/store/search?commodityName=" +
-          this.commodityName +
+        "http://47.100.137.237:8093/store/home/classify?classifyId=" +
+          this.classifyId +
           "&sort=1",
         {},
         { emulateJSON: true }
@@ -195,27 +163,18 @@ export default {
       .catch(e => {});
   },
   methods: {
-    searchCommoditySort(sort) {
+    // 返回上一页
+    retreat() {
+      this.$router.go(-1);
+    },
+    // 重新排序
+    searchClassify(sort) {
       this.$http
         .post(
-          "http://47.100.137.237:8093/store/search?commodityName=" +
-            this.commodityName +
+          "http://47.100.137.237:8093/store/home/classify?classifyId=" +
+            this.classifyId +
             "&sort=" +
             sort,
-          {},
-          { emulateJSON: true }
-        )
-        .then(result => {
-          this.paperlist = result.data;
-        })
-        .catch(e => {});
-    },
-    searchCommodity(commodityName) {
-      this.$http
-        .post(
-          "http://47.100.137.237:8093/store/search?commodityName=" +
-            this.commodityName +
-            "&sort=1",
           {},
           { emulateJSON: true }
         )

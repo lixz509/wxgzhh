@@ -79,6 +79,13 @@ body {
   width: 3vw;
   text-align: center;
 }
+.deleteShoppingTrolley{
+  position: absolute;
+  background-color: #fff;
+  width: 8vw;
+  top: 13vw;
+  right: 9vw;
+}
 .commoditNum {
   position: absolute;
   width: 15vw;
@@ -123,6 +130,7 @@ body {
   right: 19vw;
   font-size: 4vw;
 }
+
 /* 填补空缺 */
 #vacancy {
   height: 60px;
@@ -147,6 +155,7 @@ body {
         <img :src="product.showUrl" />
         <div class="productText">{{product.commodityName}}</div>
         <div class="productPrice">{{product.price}}</div>
+        <input class="deleteShoppingTrolley" @click="deleteShopping(product.shoppingTrolleyId)" type="button" value="删除" />
         <div class="commoditNum">
           <div
             class="productSubtract"
@@ -197,7 +206,7 @@ export default {
   created() {
     this.$http
       .post(
-        "http://47.100.137.237:8093/store/shopping?userid=user2",
+        "http://127.0.0.1:8093/store/shopping?userid=user2",
         {},
         { emulateJSON: true }
       )
@@ -211,7 +220,7 @@ export default {
       if (num > 0) {
         this.$http
           .post(
-            "http://47.100.137.237:8093/store/shopping/number?shoppingTrolleyId=" +
+            "http://127.0.0.1:8093/store/shopping/number?shoppingTrolleyId=" +
               shoppingTrolleyId +
               "&num=" +
               num,
@@ -237,18 +246,37 @@ export default {
         for (var i = 0; i < this.settlement.length; i++) {
           this.$http
             .post(
-              "http://47.100.137.237:8093/store/shopping/order?shoppingTrolleyId=" +
+              "http://127.0.0.1:8093/store/shopping/order?shoppingTrolleyId=" +
                 this.settlement[i],
               {},
               { emulateJSON: true }
             )
             .then(result => {
               this.orderId.push(result.data);
+              if(i = this.settlement.length){
+                // 需在此阶段传，否则会出奇怪的错误
+                // alert("跳转前"+this.orderId);
+                this.$router.push({name:"Payment",params:{orderId:this.orderId}});
+              }
+            })
+            .catch(e => {});
+        }  
+      };
+    },
+    // 删除购物车
+    deleteShopping(shoppingTrolleyId){
+        if(confirm('确定要删除吗')==true){
+          this.$http
+            .post(
+              "http://127.0.0.1:8093/store/shopping/deleteShoppingTrolley?shoppingTrolleyId="+shoppingTrolleyId,
+              {},
+              { emulateJSON: true }
+            )
+            .then(result => {
+              this.refresh();
             })
             .catch(e => {});
         }
-        this.$router.push({name:"Payment",params:{orderId:this.orderId}});
-      };
     },
     refresh() {
       this.paymentAmount = 0;
@@ -263,7 +291,7 @@ export default {
       }
       this.$http
         .post(
-          "http://47.100.137.237:8093/store/shopping?userid=user2",
+          "http://127.0.0.1:8093/store/shopping?userid=user2",
           {},
           { emulateJSON: true }
         )
@@ -274,7 +302,7 @@ export default {
     }
   },
   mounted() {
-    this.intervalId = setInterval(this.refresh, 1000);
+    // this.intervalId = setInterval(this.refresh, 1000);
   },
   beforeDestroy() {
     // 销毁定时器

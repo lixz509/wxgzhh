@@ -19,6 +19,7 @@ import Security from "@/components/Security"
 import Information from "@/components/Information"
 import AboutUs from "@/components/AboutUs"
 import ChatUserInfo from "@/components/ChatUserInfo"
+import Classify from "@/components/Classify"
 
 Vue.use(Router)
 
@@ -65,22 +66,22 @@ export default new Router({
       component: ChatRoom
     },
     {
-      path: '/Commodity',
+      path: '/Commodity/:commodityName',
       name: 'Commodity',
       component: Commodity
     },
     {
-      path: '/CommodityDetails',
+      path: '/CommodityDetails/:commodityId',
       name: 'CommodityDetails',
       component: CommodityDetails
     },
     {
-      path: '/Payment/:orderId',
+      path: '/Payment/:orderId[]',
       name: 'Payment',
       component: Payment
     },
     {
-      path: '/Order',
+      path: '/Order/:sort',
       name: 'Order',
       component: Order
     },
@@ -123,6 +124,11 @@ export default new Router({
       path: '/ChatUserInfo',
       name: 'ChatUserInfo',
       component: ChatUserInfo
+    },
+    {
+      path: '/Classify/:classifyName/:classifyId',
+      name: 'Classify',
+      component: Classify
     },
   ]
 })

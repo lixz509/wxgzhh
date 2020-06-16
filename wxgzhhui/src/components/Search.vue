@@ -1,4 +1,11 @@
 <style>
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #f6f6f6;
+}
 #searchFrame {
   position:relative;
   top: 0;
@@ -49,16 +56,15 @@
   <div id="search">
     <div id="searchFrame">
       <img class="searchimg" src="../../static/icon/search.png" />
-      <input type="text" class="searchtext" />
+      <input type="text" v-model="commodityName" class="searchtext"  @keyup.enter="searchAntistop(commodityName)" />
       <router-link :to="{path: '/Home'}">
         <div class="searchbtn">取消</div>
       </router-link>
     </div>
     <p v-for="(antistop,i) in antistops" class="antistop" @click="searchAntistop(antistop)">
-      <router-link :to="{path: '/Commodity'}">
       {{antistop}}
-      </router-link>
     </p>
+    {{commodityName}}
   </div>
 </template>
 
@@ -66,19 +72,20 @@
 export default {
   data() {
     return {
+      commodityName:"",
       antistops:{
-        one:"第一个关键词",
-        two:"第二个关键词",
-        three:"第三个关键词",
-        four:"第四个关键词",
-        five:"第五个关键词",
+        one:"手机投影仪",
+        two:"容声 BCD-432WD12FPA",
+        three:"傲风电竞椅",
+        four:"蓝牙耳机",
+        five:"真皮男士钱包",
+        six:"a"
       }
     };
   },
   methods:{
-    searchAntistop(val){
-      //之后写搜索方法
-      alert(val);
+    searchAntistop(commodityName){
+      this.$router.push({name:"Commodity",params:{commodityName:commodityName}});
     }
   }
 };

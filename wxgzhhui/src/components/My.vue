@@ -131,14 +131,14 @@ body {
       <img :src="portrait" />
       <div class="name">{{userName}}</div>
     </div>
-    <div class="order" @click="jump('Order')" >
+    <div class="order" >
       <div class="orderP">我的订单</div>
-      <div class="orderSpan">查看全部订单&gt;</div>
-      <img src="../../static/icon/payment.png" />
-      <img src="../../static/icon/shipments.png" />
-      <img src="../../static/icon/Receiving.png" />
-      <img src="../../static/icon/evaluate.png" />
-      <img src="../../static/icon/aftermarket.png" />
+      <div class="orderSpan" @click="jumpOrder('all')" >查看全部订单&gt;</div>
+      <img src="../../static/icon/payment.png" @click="jumpOrder('IS_PAYMENT')" />
+      <img src="../../static/icon/shipments.png" @click="jumpOrder('IS_SHIPMENTS')" />
+      <img src="../../static/icon/Receiving.png" @click="jumpOrder('IS_RECEIVING')" />
+      <img src="../../static/icon/evaluate.png" @click="jumpOrder('IS_EVALUATE')" />
+      <img src="../../static/icon/aftermarket.png" @click="jumpOrder('all')" />
       <ul>
         <li>&ensp;待付款</li>
         <li>&ensp;待发货</li>
@@ -221,6 +221,9 @@ export default {
   methods: {
     jump(event) {
       this.$router.push({ name: event });
+    },
+    jumpOrder(sort){
+      this.$router.push({name:"Order",params:{sort:sort}});
     }
   }
 };

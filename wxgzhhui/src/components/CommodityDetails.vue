@@ -131,31 +131,31 @@ body {
   background-color: #fff;
   width: 96vw;
   margin: 2vw 0vw;
-  height: 4.5vw;
+  line-height: 4.5vw;
   font-size: 3vw;
   padding: 0 2vw;
 }
 /* 商品评价 */
-.evaluate{
+.evaluate {
   position: relative;
   width: 100vw;
   height: 25vw;
   margin: 2vw 0vw;
   background-color: #fff;
 }
-.evaluateP{
+.evaluateP {
   position: relative;
   width: 100vw;
   font-size: 5vw;
 }
-.evaluateUserImg{
+.evaluateUserImg {
   position: absolute;
   top: 7vw;
   width: 12vw;
   height: 12vw;
-  border-radius:10vw;
+  border-radius: 10vw;
 }
-.evaluateText{
+.evaluateText {
   position: absolute;
   left: 13vw;
   top: 15vw;
@@ -168,14 +168,14 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-.evaluateStars{
+.evaluateStars {
   position: absolute;
   top: 7vw;
   left: 20vw;
   width: 25vw;
   height: 5vw;
 }
-.evaluateUserName{
+.evaluateUserName {
   position: absolute;
   top: 20vw;
   width: 12vw;
@@ -244,6 +244,12 @@ body {
   border-bottom-right-radius: 20px;
   font-size: 4vw;
 }
+.evaluateNull {
+  position: absolute;
+  top: 8vw;
+  left: 2vw;
+  font-size: 3.5vw;
+}
 /* 填补空缺 */
 #vacancy {
   height: 60px;
@@ -261,12 +267,15 @@ body {
       </router-link>
       <img
         class="collect"
-        :src="[1==1?'../../static/icon/collecta.png':'../../static/icon/collectb.png']"
+        :src="[collect=='no'?'../../static/icon/collecta.png':'../../static/icon/collectb.png']"
+        @click="collectUpdate()"
       />
+      <router-link :to="{path: '/Shopping'}">
       <img
         class="cart"
-        :src="[1==1?'../../static/icon/shoppingc.png':'../../static/icon/shoppingd.png']"
+        :src="[shoppingTrolley=='no'?'../../static/icon/shoppingc.png':'../../static/icon/shoppingd.png']"
       />
+      </router-link>
     </div>
     <div id="slideshow">
       <img class="leftarrows" src="../../static/icon/left.png" @click="leftarrows" />
@@ -284,37 +293,48 @@ body {
         @touchstart="touchStart"
         @touchend="touchEnd"
       >
-        <img class="carouselImg" v-for="(slideshow,i) in slideshowUrl" :src="slideshow" />
+        <img class="carouselImg" v-for="(slideshow,i) in paperlist.slideshowUrl" :src="slideshow" />
       </div>
     </div>
     <div class="sellingPrice">
-      2700
-      <span>9999</span>
+      {{paperlist.price}}
+      <span>{{paperlist.originalPrice}}</span>
     </div>
-    <div class="commodityName">2020新款手机投影仪一体机家用小型迷你wifi微型无线3D家庭影院投墙上超便携式高清4K激光看电影掌上电视宿舍</div>
-    <div class="commoditySynopsis">核处理器 3G大运行内存 万元配置</div>
+    <div class="commodityName">{{paperlist.commodityName}}</div>
+    <div class="commoditySynopsis">{{paperlist.commodityIntro}}</div>
     <div class="evaluate">
       <div class="evaluateP">评价</div>
-      <img class="evaluateUserImg" src="../../static/icon/evaluateUser.png" /> 
-      <img class="evaluateStars" src="../../static/icon/fiveStars.png">
-      <div class="evaluateUserName">用户3333</div>
-      <div class="evaluateText">这是一个多字的好评，这是一个多字的好评这是一个多字的好评这是一个多字的好评这是一个多字的好评这是一个多字
-        的好评这是一个多字的好评这是一个多字的好评这是一个多字的好评</div>
+      <img
+        class="evaluateUserImg"
+        v-if="paperlist.storeEvaluate"
+        src="../../static/icon/evaluateUser.png"
+      />
+      <img class="evaluateStars" v-if="paperlist.storeEvaluate" :src="rating" />
+      <div
+        class="evaluateUserName"
+        v-if="paperlist.storeEvaluate"
+      >{{paperlist.storeEvaluate.userName}}</div>
+      <div
+        class="evaluateText"
+        v-if="paperlist.storeEvaluate"
+      >{{paperlist.storeEvaluate.evaluateText}}</div>
+      <div class="evaluateNull" v-show="evaluateNull == 0">该商品暂无评价</div>
     </div>
-
-    <img class="particulars" v-for="(slideshow,i) in slideshowUrl" :src="slideshow" />
-
+    <img class="particulars" v-for="(slideshow,i) in paperlist.particularsUrl" :src="slideshow" />
     <div id="vacancy"></div>
     <div class="detailsFooter">
-      <img class="support" :src="'../../static/icon/support.png'" />
+      <router-link :to="{path: '/ChatRoom',query:{dialogueUserId:'user1'}}">
+        <img class="support" :src="'../../static/icon/support.png'" />
+        <div class="supportText">&ensp;客服</div>
+      </router-link>
       <img
         class="collect2"
-        :src="[1==1?'../../static/icon/collecta.png':'../../static/icon/collectb.png']"
+        :src="[collect=='no'?'../../static/icon/collecta.png':'../../static/icon/collectb.png']"
+        @click="collectUpdate()"
       />
-      <div class="supportText">&ensp;客服</div>
       <div class="collect2Text">收藏</div>
-      <input class="shoppingCart" type="button" value="加入购物车" />
-      <input class="buy" type="button" value="立即购买" />
+      <input class="shoppingCart" type="button" value="加入购物车" @click="addShoppingTrolley()" />
+      <input class="buy" type="button" value="立即购买" @click="buy()" />
     </div>
   </div>
 </template>
@@ -323,6 +343,8 @@ body {
 export default {
   data() {
     return {
+      paperlist: [],
+      commodityId: "",
       slideshowUrl: {
         one: "../static/a.jpg",
         two: "../static/b.jpg",
@@ -341,8 +363,41 @@ export default {
         { night: false },
         { night: false },
         { night: false }
-      ]
+      ],
+      rating: "",
+      evaluateNull: 0,
+      collect: "n",
+      shoppingTrolley: "n",
+      orderId:[]
     };
+  },
+  created() {
+    this.commodityId = this.$route.params.commodityId;
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/commodity?userid=user2&commodityId=" +
+          this.commodityId,
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+        this.collect = result.data.collect;
+        this.shoppingTrolley = result.data.shoppingTrolley;
+        if (this.collect == "yes") {
+          document.getElementsByClassName("collect2Text")[0].innerHTML =
+            "已收藏";
+        }
+        if (this.shoppingTrolley == "yes") {
+          document.getElementsByClassName("shoppingCart")[0].value =
+            "已加入购物车";
+        }
+        // 需放最后，否则会有写小问题
+        this.rating =
+          "../static/icon/stars" + result.data.storeEvaluate.rating + ".png";
+        this.evaluateNull = result.data.storeEvaluate.length;
+      })
+      .catch(e => {});
   },
   methods: {
     // 自动轮播事件
@@ -445,6 +500,70 @@ export default {
         this.intervalId = setInterval(this.carousel, 3000);
         // console.log(this.endX);
       }
+    },
+    // 添加，取消收藏
+    collectUpdate() {
+      switch (this.collect) {
+        case "yes":
+          this.$http
+            .post(
+              "http://47.100.137.237:8093/store/commodity/deleteCollect?userid=user2&commodityId=" +
+                this.commodityId,
+              {},
+              { emulateJSON: true }
+            )
+            .then(result => {})
+            .catch(e => {});
+          this.collect = "no";
+          document.getElementsByClassName("collect2Text")[0].innerHTML = "收藏";
+          break;
+        case "no":
+          this.$http
+            .post(
+              "http://47.100.137.237:8093/store/commodity/addCollect?userid=user2&commodityId=" +
+                this.commodityId,
+              {},
+              { emulateJSON: true }
+            )
+            .then(result => {})
+            .catch(e => {});
+          this.collect = "yes";
+          document.getElementsByClassName("collect2Text")[0].innerHTML =
+            "已收藏";
+          break;
+      }
+    },
+    // 将商品加入购物车
+    addShoppingTrolley() {
+      if (this.shoppingTrolley == "no") {
+        this.$http
+          .post(
+            "http://47.100.137.237:8093/store/commodity/addShoppingTrolley?userid=user2&commodityId=" +
+              this.commodityId,
+            {},
+            { emulateJSON: true }
+          )
+          .then(result => {})
+          .catch(e => {});
+        this.shoppingTrolley = "yes";
+        document.getElementsByClassName("shoppingCart")[0].value =
+          "已加入购物车";
+      }
+    },
+    // 购买商品
+    buy(){
+      this.$http
+          .post(
+            "http://47.100.137.237:8093/store/commodity/addOrder?userid=user2&commodityId=" +
+              this.commodityId,
+            {},
+            { emulateJSON: true }
+          )
+          .then(result => {
+            this.orderId[0]=result.data;
+            this.$router.push({name:"Payment",params:{orderId:this.orderId}});
+          })
+          .catch(e => {});
     },
     // 返回上一页
     retreat() {

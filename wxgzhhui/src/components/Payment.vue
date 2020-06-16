@@ -95,7 +95,6 @@ export default {
       )
       .then(result => {
         this.balance = result.data.balance;
-        // 查询订单金额
         for (var i = 0; i < this.orderId.length; i++) {
           this.$http
             .post(

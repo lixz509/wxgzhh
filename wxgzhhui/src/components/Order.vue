@@ -11,6 +11,7 @@ body {
   position: fixed;
   z-index: 10;
   top: 0vw;
+  background-color: #f6f6f6;
   height: 60px;
   width: 100vw;
 }
@@ -30,17 +31,17 @@ body {
   z-index: 1;
   border-radius: 10px;
   padding-left: 20px;
-  border:black solid 1px;
+  border: black solid 1px;
   font-size: 3vw;
 }
-.orderSearch{
+.orderSearch {
   position: absolute;
   top: 8px;
   right: 15px;
   width: 60px;
   height: 40px;
-  background-color: #F0F8FF;
-  border:black solid 1px;
+  background-color: #f0f8ff;
+  border: black solid 1px;
   font-size: 20px;
   border-radius: 10px;
 }
@@ -50,10 +51,11 @@ body {
   position: relative;
 }
 /* 订单选项卡 */
-.orderType{
-  position:fixed;
+.orderType {
+  position: fixed;
   top: 60px;
   z-index: 10;
+  background-color: #f6f6f6;
   height: 10vw;
   width: 100vw;
 }
@@ -73,12 +75,11 @@ body {
   cursor: pointer;
 }
 /* 订单列表 */
-.orderList{
+.orderList {
   position: relative;
   width: 100vw;
-  /* background-color: bisque; */
 }
-.myOrder{
+.myOrder {
   position: relative;
   width: 100vw;
   height: 30vw;
@@ -86,14 +87,14 @@ body {
   background-color: #fff;
   border-radius: 5vw;
 }
-.myOrder img{
+.myOrder img {
   position: absolute;
   top: 2vw;
   left: 2vw;
   width: 20vw;
   height: 20vw;
 }
-.myOrderName{
+.myOrderName {
   position: absolute;
   top: 8vw;
   left: 24vw;
@@ -105,43 +106,43 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-.myOrderState{
+.myOrderState {
   position: absolute;
   top: 2vw;
   right: 6vw;
   font-size: 2.7vw;
 }
-.myOrderNum{
+.myOrderNum {
   position: absolute;
   top: 16vw;
   right: 6vw;
   font-size: 3vw;
 }
-.myOrderBtn{
+.myOrderBtn {
   position: absolute;
   top: 20vw;
   left: 24vw;
   height: 5vw;
   width: 15vw;
   background-color: #fff;
-  border:#2E8B57 solid 1px;
+  border: #2e8b57 solid 1px;
   border-radius: 5vw;
 }
 /* 订单价格 */
-.orderSellingPrice{
+.orderSellingPrice {
   position: absolute;
   left: 65vw;
   top: 16vw;
   width: 20vw;
   font-size: 3vw;
 }
-.orderOriginalPrice{
+.orderOriginalPrice {
   display: inline-block;
   color: gray;
   font-size: 2.7vw;
   text-decoration: line-through;
 }
-.myOrderPrice{
+.myOrderPrice {
   position: absolute;
   left: 76vw;
   top: 22vw;
@@ -154,31 +155,42 @@ body {
     <div id="vacancy" style="height: calc(60px + 10vw)"></div>
     <div class="orderHeader">
       <img class="retreat" @click="retreat" src="../../static/icon/retreat.png" />
-      <input type="text" class="orderText"  placeholder="搜索我的订单" />
-      <input type="button" class="orderSearch" value="搜索"/>
+      <input type="text" class="orderText" placeholder="搜索我的订单" v-model="orderName" @keyup.enter="searchOrder()" />
+      <input type="button" class="orderSearch" @click="searchOrder()" value="搜索" />
     </div>
     <div class="orderType">
       <ul>
-        <li style="border-bottom: #FF0000 2px solid;">全部</li>
-        <li>待付款</li>
-        <li>待发货</li>
-        <li>待收货</li>
-        <li>待评价</li>
+        <li @click="updateSort('all')" :style="{'border-bottom':(sort=='all'?'#FF0000 2px solid':'')}" >全部</li>
+        <li @click="updateSort('IS_PAYMENT')" :style="{'border-bottom':(sort=='IS_PAYMENT'?'#FF0000 2px solid':'')}">待付款</li>
+        <li @click="updateSort('IS_SHIPMENTS')" :style="{'border-bottom':(sort=='IS_SHIPMENTS'?'#FF0000 2px solid':'')}">待发货</li>
+        <li @click="updateSort('IS_RECEIVING')" :style="{'border-bottom':(sort=='IS_RECEIVING'?'#FF0000 2px solid':'')}">待收货</li>
+        <li @click="updateSort('IS_EVALUATE')" :style="{'border-bottom':(sort=='IS_EVALUATE'?'#FF0000 2px solid':'')}">待评价</li>
       </ul>
     </div>
     <div class="orderList">
-      <div class="myOrder" >
-        <img src="../../static/a.jpg">
-        <div class="myOrderState">交易完成</div>
-        <div class="myOrderName">这是商品的名字这是商品的名字这是商品的名字这是商品的名字这是商品的名字
-          这是商品的名字这是商品的名字这是商品的名字这是商品的名字这是商品的名字
+      <div class="myOrder" v-for="(order,i) in paperlist" @click="jumpCommodityDetails(order.storeCommodity.commodityId)">
+        <img :src="order.storeCommodity.showUrl" />
+        <div
+          class="myOrderState"
+          v-show="order.storeOrder.orderState == 'IS_EVALUATE' 
+        || order.storeOrder.orderState == 'IS_AFTERMARKET' "
+        >交易完成</div>
+        <div class="myOrderState" v-show="order.storeOrder.orderState == 'IS_PAYMENT' ">待付款</div>
+        <div class="myOrderState" v-show="order.storeOrder.orderState == 'IS_SHIPMENTS' ">待发货</div>
+        <div class="myOrderState" v-show="order.storeOrder.orderState == 'IS_RECEIVING' ">待收货</div>
+        <div class="myOrderName">{{order.storeCommodity.commodityName}}</div>
+        <div class="orderSellingPrice">
+          ￥{{order.storeCommodity.price}}
+          <div class="orderOriginalPrice">￥{{order.storeCommodity.originalPrice}}</div>
         </div>
-        <div class="orderSellingPrice">￥666
-          <div class="orderOriginalPrice">￥999</div>
-        </div>
-        <div class="myOrderNum" >×1</div>
-        <div class="myOrderPrice">￥1999</div>
-        <input type="button" class="myOrderBtn" value="追评" />
+        <div class="myOrderNum">×{{order.storeOrder.purchaseQuantity}}</div>
+        <div class="myOrderPrice">￥{{order.storeOrder.totalPrice}}</div>
+        <input type="button" class="myOrderBtn" @click="jumpPayment(order.storeOrder.orderId)" 
+        value="去付款" v-show="order.storeOrder.orderState == 'IS_PAYMENT'" />
+        <input type="button" class="myOrderBtn" value="已支付" v-show="order.storeOrder.orderState == 'IS_SHIPMENTS'" />
+        <input type="button" class="myOrderBtn" value="确认收货" v-show="order.storeOrder.orderState == 'IS_RECEIVING'" />
+        <input type="button" class="myOrderBtn" value="评价" v-show="order.storeOrder.orderState == 'IS_EVALUATE'" />
+        <input type="button" class="myOrderBtn" value="已评价" v-show="order.storeOrder.orderState == 'IS_AFTERMARKET'"/>
       </div>
     </div>
   </div>
@@ -187,9 +199,64 @@ body {
 <script>
 export default {
   data() {
-    return {};
+    return {
+      paperlist: [],
+      sort:"all",
+      orderId:[],
+      orderName:""
+    };
+  },
+  created() {
+    this.sort = this.$route.params.sort;
+    this.$http
+      .post(
+        "http://47.100.137.237:8093/store/order?userid=user2&sort="+this.sort,
+        {},
+        { emulateJSON: true }
+      )
+      .then(result => {
+        this.paperlist = result.data;
+      })
+      .catch(e => {});
   },
   methods: {
+    // 跳转到其他状态
+    updateSort(sort){
+      this.sort=sort;
+      this.$http
+        .post(
+          "http://47.100.137.237:8093/store/order?userid=user2&sort="+this.sort,
+          {},
+          { emulateJSON: true }
+        )
+        .then(result => {
+          this.paperlist = result.data;
+        })
+        .catch(e => {});
+    },
+    // 跳转去支付
+    jumpPayment(orderId){
+      this.orderId[0]=orderId;
+      this.$router.push({name:"Payment",params:{orderId:this.orderId}});
+    },
+    // 跳转到商品详情
+    jumpCommodityDetails(commodityId){
+      this.$router.push({name:"CommodityDetails",params:{commodityId:commodityId}});
+    },
+    // 搜索订单
+    searchOrder(){
+      this.$http
+        .post(
+          "http://47.100.137.237:8093/store/order/search?userid=user2&commodityName="+this.orderName,
+          {},
+          { emulateJSON: true }
+        )
+        .then(result => {
+          this.paperlist = result.data;
+          this.sort="all";
+        })
+        .catch(e => {});
+    },
     // 返回上一页
     retreat() {
       this.$router.go(-1);
