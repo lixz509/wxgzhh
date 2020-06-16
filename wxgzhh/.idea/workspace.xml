@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/css/app.c617b6627674bb3d49b5661062e2b135.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/js/app.106891b8c9fc72f0e26a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Address.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Address.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatUserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatUserInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Commodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Commodity.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/CommodityDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/CommodityDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Favorite.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Favorite.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Information.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/My.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/My.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Payment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Payment.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Security.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Shopping.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Shopping.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/fiveStars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/fourStars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/oneStars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/threeStars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/twoStars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/service/AccessTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/service/AccessTokenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/service/AccessTokenManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/service/AccessTokenManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/service/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/service/MenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weixin/src/main/java/com/lpj/wxgzhh/controller/MessageConvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/java/com/lpj/wxgzhh/controller/MessageConvertController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -424,6 +407,8 @@
       <workItem from="1592207166177" duration="9341000" />
       <workItem from="1592235628294" duration="6652000" />
       <workItem from="1592292280262" duration="6083000" />
+      <workItem from="1592318962129" duration="1729000" />
+      <workItem from="1592325541693" duration="1510000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -733,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592300977397</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="sql语句">
+      <created>1592319014649</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1592319014649</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +746,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="将获取到的token存储到redis数据库中，需要时先获取，获取不到再请求1" />
     <MESSAGE value="创建菜单，有点击与跳转2种方式1" />
     <MESSAGE value="增加快捷的运行脚本" />
     <MESSAGE value="增加快捷的运行脚本1" />
@@ -779,7 +770,8 @@
     <MESSAGE value="增加图片" />
     <MESSAGE value="补充其余后端" />
     <MESSAGE value="添加图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加图片" />
+    <MESSAGE value="sql语句" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql语句" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1591372476393">
@@ -802,50 +794,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1592300976448">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1592319013617">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592300976448" />
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592302946739">
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592319013617" />
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
-    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1592302946739">
+    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1592327323152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592327323152" />
     <state x="270" y="55" key="SettingsEditor" timestamp="1589904806075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1592300989113">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1592319028824">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592300989113" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592319028824" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1591090046861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

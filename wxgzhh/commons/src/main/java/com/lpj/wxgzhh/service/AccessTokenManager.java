@@ -21,8 +21,11 @@ public class AccessTokenManager {
 
     //用于获取token。获取token的方式，向微信指定地址发送get请求传3个参数
     public String getToken(String account){
-        String appID="wx656999f734cc7d7b";
-        String appsecret="6baaabdfa5bfa88b0f764f6cc89be919";
+        // 测试号appID，appsecret
+//        String appID="wx656999f734cc7d7b";
+//        String appsecret="6baaabdfa5bfa88b0f764f6cc89be919";
+        String appID="wx9e1bc1182bdf8864";
+        String appsecret= "aa7b235b4f5d95f66d67b12247c0b632";
         String url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+appID+"&secret="+appsecret;
         //创建HTTP客户端
         HttpClient hc = HttpClient.newBuilder().build();

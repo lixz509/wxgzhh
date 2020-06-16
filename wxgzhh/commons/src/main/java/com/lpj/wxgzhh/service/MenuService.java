@@ -30,13 +30,14 @@ public class MenuService {
     public String Menu(){
         //设置菜单
         Button btn=new Button();
-        btn.getButton().add(new ViewMenuButton("这是我的简历","http://47.100.137.237/jl"));
-        SubButtonMenuButton sb1=new SubButtonMenuButton("子菜单一");
-        sb1.getSubButton().add(new ViewMenuButton("开发的前端界面","http://47.100.137.237/"));
-        sb1.getSubButton().add(new ScancodePushMenuButton("扫码推事件","2-2"));
-        sb1.getSubButton().add(new ScancodeWaitmsgMenuButton("扫码带提示","2-3"));
-//        sb1.getSubButton().add(new MediaIdMenuButton("图片","cDFc3CoiVe3WUON zqqQxYgX2NZHKX_P_UAZ35rwIbAasuzE_yyzZEeEoZRkWzPVz"));
-        btn.getButton().add(sb1);
+        btn.getButton().add(new ViewMenuButton("开发的商城","http://47.100.137.237/"));
+        btn.getButton().add(new ViewMenuButton("我的简历","http://47.100.137.237/jl"));
+//        SubButtonMenuButton sb1=new SubButtonMenuButton("子菜单一");
+//        sb1.getSubButton().add(new ViewMenuButton("开发的前端界面","http://47.100.137.237/jl"));
+//        sb1.getSubButton().add(new ScancodePushMenuButton("扫码推事件","2-2"));
+//        sb1.getSubButton().add(new ScancodeWaitmsgMenuButton("扫码带提示","2-3"));
+////        sb1.getSubButton().add(new MediaIdMenuButton("图片","cDFc3CoiVe3WUON zqqQxYgX2NZHKX_P_UAZ35rwIbAasuzE_yyzZEeEoZRkWzPVz"));
+//        btn.getButton().add(sb1);
         SubButtonMenuButton sb2=new SubButtonMenuButton("子菜单二");
         sb2.getSubButton().add(new PicWeixinMenuButton("微信相册发图","3-1"));
         sb2.getSubButton().add(new LocationSelectMenuButton("发送位置","3-2"));

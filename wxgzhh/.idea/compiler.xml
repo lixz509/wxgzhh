@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="textmessage" />
-        <module name="subscribe" />
+        <module name="weixin" />
         <module name="commons" />
         <module name="store" />
-        <module name="weixin" />
+        <module name="subscribe" />
       </profile>
     </annotationProcessing>
   </component>
