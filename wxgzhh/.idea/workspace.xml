@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/css/app.c617b6627674bb3d49b5661062e2b135.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/js/app.106891b8c9fc72f0e26a.js" beforeDir="false" />
@@ -468,7 +423,7 @@
       <workItem from="1592152383548" duration="70000" />
       <workItem from="1592207166177" duration="9341000" />
       <workItem from="1592235628294" duration="6652000" />
-      <workItem from="1592292280262" duration="5606000" />
+      <workItem from="1592292280262" duration="6083000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -771,7 +726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592298959421</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="添加图片">
+      <created>1592300977397</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1592300977397</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -792,7 +754,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="添加多种回复模式，在接收到不同文本消息后进行回复1" />
     <MESSAGE value="将获取到的token存储到redis数据库中，需要时先获取，获取不到再请求1" />
     <MESSAGE value="创建菜单，有点击与跳转2种方式1" />
     <MESSAGE value="增加快捷的运行脚本" />
@@ -817,7 +778,8 @@
     <MESSAGE value="增加购物车模块" />
     <MESSAGE value="增加图片" />
     <MESSAGE value="补充其余后端" />
-    <option name="LAST_COMMIT_MESSAGE" value="补充其余后端" />
+    <MESSAGE value="添加图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加图片" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1591372476393">
@@ -840,50 +802,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1592298957502">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1592300976448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592298957502" />
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592298910381">
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592300976448" />
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
-    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1592298910381">
+    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1592302946739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592302946739" />
     <state x="270" y="55" key="SettingsEditor" timestamp="1589904806075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1592298964699">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1592300989113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592298964699" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592300989113" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1591090046861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
