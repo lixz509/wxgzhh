@@ -124,7 +124,7 @@ body {
     </div>
     <div class="commodityList">
       <div class="commodity" v-for="(commodity,i) in paperlist">
-        <img :src="commodity.particularsUrl" />
+        <img :src="commodity.showUrl" />
         <div class="commodityText">{{commodity.commodityName}}</div>
         <div class="commodityPrice">
           ￥{{commodity.price}}

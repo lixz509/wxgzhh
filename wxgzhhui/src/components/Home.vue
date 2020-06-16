@@ -286,8 +286,8 @@ body {
       >
         <img
           class="carouselImg"
-          v-for="(slideshow,i) in paperlist.slideshowUrl"
-          :src="slideshow.show_url"
+          v-for="(slideshow,i) in paperlist.slideShows"
+          :src="slideshow.showUrl"
           @click="jumpCommodityDetails(slideshow.commodityId)"
         />
       </div>
@@ -387,6 +387,7 @@ export default {
   methods: {
     // 自动轮播事件
     carousel() {
+      // alert("a");
       // 通过控制左移位置控制图片移动
       if (this.leftshift > -400) {
         this.balls[this.leftshift / -100].night = false;
@@ -410,7 +411,7 @@ export default {
         this.balls[0].night = false;
         this.balls[4].night = true;
       }
-      this.intervalId = setInterval(this.carousel, 3000);
+       this.intervalId = setInterval(()=>{this.carousel()},3000);
     },
     // 右箭头点击事件
     rigtharrows() {
@@ -424,7 +425,7 @@ export default {
         this.balls[0].night = true;
         this.balls[4].night = false;
       }
-      this.intervalId = setInterval(this.carousel, 3000);
+       this.intervalId = setInterval(()=>{this.carousel()},3000);
     },
     // 小球点击事件
     balla(i) {
@@ -435,7 +436,7 @@ export default {
       }
       this.balls[i].night = true;
       // console.log(leftshift);
-      this.intervalId = setInterval(this.carousel, 3000);
+      this.intervalId = setInterval(()=>{this.carousel()},3000);
     },
     // 开始触摸事件
     touchStart(ev) {
@@ -482,7 +483,7 @@ export default {
             this.balls[4].night = false;
           }
         }
-        this.intervalId = setInterval(this.carousel, 3000);
+        this.intervalId = setInterval(()=>{this.carousel()},3000);
         // console.log(this.endX);
       }
     },
@@ -490,11 +491,12 @@ export default {
       this.$router.push({name:"Classify",params:{classifyId:classifyId,classifyName:classifyName}});
     },
     jumpCommodityDetails(commodityId){
+      alert(commodityId);
       this.$router.push({name:"CommodityDetails",params:{commodityId:commodityId}});
     }
   },
   mounted() {
-    this.intervalId = setInterval(this.carousel, 3000);
+    this.intervalId = setInterval(()=>{this.carousel()},3000);
   }
 };
 </script>

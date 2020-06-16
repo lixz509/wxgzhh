@@ -206,7 +206,7 @@ export default {
   created() {
     this.$http
       .post(
-        "http://127.0.0.1:8093/store/shopping?userid=user2",
+        "http://47.100.137.237:8093/store/shopping?userid=user2",
         {},
         { emulateJSON: true }
       )
@@ -220,7 +220,7 @@ export default {
       if (num > 0) {
         this.$http
           .post(
-            "http://127.0.0.1:8093/store/shopping/number?shoppingTrolleyId=" +
+            "http://47.100.137.237:8093/store/shopping/number?shoppingTrolleyId=" +
               shoppingTrolleyId +
               "&num=" +
               num,
@@ -246,7 +246,7 @@ export default {
         for (var i = 0; i < this.settlement.length; i++) {
           this.$http
             .post(
-              "http://127.0.0.1:8093/store/shopping/order?shoppingTrolleyId=" +
+              "http://47.100.137.237:8093/store/shopping/order?shoppingTrolleyId=" +
                 this.settlement[i],
               {},
               { emulateJSON: true }
@@ -268,7 +268,7 @@ export default {
         if(confirm('确定要删除吗')==true){
           this.$http
             .post(
-              "http://127.0.0.1:8093/store/shopping/deleteShoppingTrolley?shoppingTrolleyId="+shoppingTrolleyId,
+              "http://47.100.137.237:8093/store/shopping/deleteShoppingTrolley?shoppingTrolleyId="+shoppingTrolleyId,
               {},
               { emulateJSON: true }
             )
@@ -291,7 +291,7 @@ export default {
       }
       this.$http
         .post(
-          "http://127.0.0.1:8093/store/shopping?userid=user2",
+          "http://47.100.137.237:8093/store/shopping?userid=user2",
           {},
           { emulateJSON: true }
         )
