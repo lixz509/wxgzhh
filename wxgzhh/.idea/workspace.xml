@@ -2,49 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/StoreCollect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreEvaluate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/CommodityDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/FavoriteDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/OrderDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/CommodityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CollectRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/EvaluateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/CommodityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/a5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/aa5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/bb5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/d5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/dd5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/e5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/ee5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreCommodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreCommodity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/OrderContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/OrderContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ShoppingTrolleyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ShoppingTrolleyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/StoreUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/StoreUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/OrderContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/OrderContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ShoppingTrolleyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ShoppingTrolleyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/HomeContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/HomeContentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/MyContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/MyContentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/OrderContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/OrderContentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/ShoppingTrolleyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/ShoppingTrolleyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ClassifyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ClassifyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/CommodityRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/CommodityRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/OrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/StoreUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/StoreUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/HomeContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/HomeContentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/MyContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/MyContentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/OrderContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/OrderContentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/ShoppingTrolleyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/ShoppingTrolleyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity/c4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/css/app.c617b6627674bb3d49b5661062e2b135.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/js/app.106891b8c9fc72f0e26a.js" beforeDir="false" />
@@ -129,7 +132,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/weixin/src/main/resources/static/store" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -149,11 +152,11 @@
       <recent name="com.lpj.wxgzhh" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\commodity" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\classify" />
       <recent name="E:\idea\wxgzhh\wxgzhh\store\src\main" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\portrait" />
-      <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,7 +331,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -465,7 +468,7 @@
       <workItem from="1592152383548" duration="70000" />
       <workItem from="1592207166177" duration="9341000" />
       <workItem from="1592235628294" duration="6652000" />
-      <workItem from="1592292280262" duration="3575000" />
+      <workItem from="1592292280262" duration="5606000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -761,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591952919720</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="补充其余后端">
+      <created>1592298959421</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1592298959421</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +792,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="使用客服消息发送1" />
     <MESSAGE value="添加多种回复模式，在接收到不同文本消息后进行回复1" />
     <MESSAGE value="将获取到的token存储到redis数据库中，需要时先获取，获取不到再请求1" />
     <MESSAGE value="创建菜单，有点击与跳转2种方式1" />
@@ -807,7 +816,8 @@
     <MESSAGE value="修改部分名称" />
     <MESSAGE value="增加购物车模块" />
     <MESSAGE value="增加图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加图片" />
+    <MESSAGE value="补充其余后端" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充其余后端" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1591372476393">
@@ -830,10 +840,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1591952918798">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1592298957502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591952918798" />
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592298957502" />
     <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -870,10 +880,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591953693243">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1592298964699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591953693243" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592298964699" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1591090046861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
