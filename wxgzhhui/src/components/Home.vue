@@ -491,7 +491,7 @@ export default {
       this.$router.push({name:"Classify",params:{classifyId:classifyId,classifyName:classifyName}});
     },
     jumpCommodityDetails(commodityId){
-      alert(commodityId);
+      // alert(commodityId);
       this.$router.push({name:"CommodityDetails",params:{commodityId:commodityId}});
     }
   },
