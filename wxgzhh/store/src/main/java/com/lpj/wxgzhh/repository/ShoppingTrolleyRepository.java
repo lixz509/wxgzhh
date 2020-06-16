@@ -32,4 +32,13 @@ public interface ShoppingTrolleyRepository extends JpaRepository<StoreShoppingTr
     @Modifying
     @Query(value = "delete from store_shopping_trolley WHERE shopping_trolley_id=:shoppingTrolleyId",nativeQuery=true)
     int deleteByShoppingTrolleyId(@Param("shoppingTrolleyId")String shoppingTrolleyId);
+
+    // 根据用户id及商品id查询购物车信息
+    @Query(value = "SELECT * FROM wxgzhh.store_shopping_trolley where user_id=:userId and " +
+            "commodity_id=:commodityId limit 1",nativeQuery=true)
+    StoreShoppingTrolley findByUserIdAndCommodityId(@Param("userId")String userId,@Param("commodityId")String commodityId);
+
+    // 添加购物车
+    <S extends StoreShoppingTrolley> S save(S entity);
+
 }

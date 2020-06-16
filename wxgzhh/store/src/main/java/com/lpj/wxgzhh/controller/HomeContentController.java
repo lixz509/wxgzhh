@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/store/home")
 public class HomeContentController {
+
     private static final Logger LOG = LoggerFactory.getLogger(HomeContentController.class);
 
     @Autowired
@@ -19,6 +20,14 @@ public class HomeContentController {
     @PostMapping
     public String onHome(@RequestParam("userid") String userId){
         String json=HCS.homeShow();
+        return json;
+    }
+
+    // 前端传分类id，排序方式，查找商品
+    @PostMapping
+    @RequestMapping("/classify")
+    public String onClassify(@RequestParam("classifyId") String classifyId,@RequestParam("sort") String sort){
+        String json=HCS.classifyCommodity(classifyId,sort);
         return json;
     }
 }

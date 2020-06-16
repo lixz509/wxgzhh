@@ -1,11 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="修改部分名称">
+    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/StoreCollect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreEvaluate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/CommodityDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/FavoriteDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/dto/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/CommodityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CollectRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/EvaluateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/CommodityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/SearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreCommodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreCommodity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/domain/StoreUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreCommodity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/domain/StoreUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/HomeContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/MyContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/OrderContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/OrderContentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ShoppingTrolleyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/ShoppingTrolleyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ClassifyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/CommodityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/StoreUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/repository/StoreUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/HomeContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/MyContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/OrderContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/OrderContentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ShoppingTrolleyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/ShoppingTrolleyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/HomeContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/HomeContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/MyContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/MyContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/OrderContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/OrderContentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/ShoppingTrolleyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/controller/ShoppingTrolleyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ClassifyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ClassifyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/CommodityRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/CommodityRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/OrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/ShoppingTrolleyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/StoreUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/repository/StoreUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/HomeContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/HomeContentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/MyContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/MyContentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/OrderContentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/OrderContentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/ShoppingTrolleyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store/target/classes/com/lpj/wxgzhh/service/ShoppingTrolleyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/css/app.c617b6627674bb3d49b5661062e2b135.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/dist/static/js/app.106891b8c9fc72f0e26a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Address.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Address.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatUserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatUserInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Commodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Commodity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/CommodityDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/CommodityDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Favorite.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Favorite.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Information.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/My.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/My.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Payment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Payment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Search.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Security.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Shopping.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Shopping.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/fiveStars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/fourStars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/oneStars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/threeStars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/static/icon/twoStars.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +149,11 @@
       <recent name="com.lpj.wxgzhh" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\classify" />
       <recent name="E:\idea\wxgzhh\wxgzhh\store\src\main" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\portrait" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static" />
-      <recent name="E:\idea\wxgzhh\wxgzhh\subscribe\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -266,6 +328,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
@@ -388,6 +455,17 @@
       <workItem from="1591692910426" duration="2217000" />
       <workItem from="1591696330063" duration="2326000" />
       <workItem from="1591717030473" duration="540000" />
+      <workItem from="1591952735307" duration="1859000" />
+      <workItem from="1591956235649" duration="3817000" />
+      <workItem from="1591974969249" duration="6498000" />
+      <workItem from="1592032506693" duration="10105000" />
+      <workItem from="1592061913484" duration="4946000" />
+      <workItem from="1592124015119" duration="3270000" />
+      <workItem from="1592140615087" duration="7322000" />
+      <workItem from="1592152383548" duration="70000" />
+      <workItem from="1592207166177" duration="9341000" />
+      <workItem from="1592235628294" duration="6652000" />
+      <workItem from="1592292280262" duration="3575000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -676,7 +754,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591695643777</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="增加图片">
+      <created>1591952919720</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1591952919720</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,7 +782,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="使用TextMessage模块回复3" />
     <MESSAGE value="使用客服消息发送1" />
     <MESSAGE value="添加多种回复模式，在接收到不同文本消息后进行回复1" />
     <MESSAGE value="将获取到的token存储到redis数据库中，需要时先获取，获取不到再请求1" />
@@ -722,7 +806,8 @@
     <MESSAGE value="添加对话处理模块后端" />
     <MESSAGE value="修改部分名称" />
     <MESSAGE value="增加购物车模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加购物车模块" />
+    <MESSAGE value="增加图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加图片" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Notifications" timestamp="1591372476393">
@@ -737,62 +822,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Updates/0.0.1536.824@0.0.1536.824" timestamp="1590996871018" />
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583650892648">
+    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1592248884594">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583650892648" />
-    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1591687669966">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591687669966" />
+    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1592248884594" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590064157435">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1591695643026">
+    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1591952918798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591695643026" />
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1591695687560">
+    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591952918798" />
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
-    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1591695687560">
+    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1592298910381">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591695687560" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592298910381" />
     <state x="270" y="55" key="SettingsEditor" timestamp="1589904806075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591696344577">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591953693243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591696344577" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591953693243" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1591090046861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -809,6 +890,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1590160143270" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592246906665">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592246906665" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

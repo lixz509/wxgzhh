@@ -40,7 +40,7 @@ public class StoreUser {
     @JsonProperty("password")
     private String password;
 
-    // 地址
+    // 地区
     @JsonProperty("location")
     private String location;
 
@@ -56,6 +56,14 @@ public class StoreUser {
     @JsonProperty("user_state")
     @Enumerated(EnumType.STRING)
     private userStatus userState;
+
+    // 收货地址
+    @JsonProperty("address")
+    private String address;
+
+    // 手机号
+    @JsonProperty("phone")
+    private String phone;
 
     public String getUserId() {
         return userId;
@@ -119,5 +127,21 @@ public class StoreUser {
 
     public void setUserState(userStatus userState) {
         this.userState = userState;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

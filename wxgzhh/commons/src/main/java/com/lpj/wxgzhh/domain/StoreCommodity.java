@@ -78,6 +78,10 @@ public class StoreCommodity {
     @Enumerated(EnumType.STRING)
     private commodityState commodityState;
 
+    // 商品轮播图地址
+    @JsonProperty("slideshow_url")
+    private String slideshowUrl;
+
     public String getCommodityId() {
         return commodityId;
     }
@@ -182,7 +186,14 @@ public class StoreCommodity {
         this.commodityState = commodityState;
     }
 
-    @Override
+    public String getSlideshowUrl() {
+        return slideshowUrl;
+    }
+
+    public void setSlideshowUrl(String slideshowUrl) {
+        this.slideshowUrl = slideshowUrl;
+    }
+
     public String toString() {
         return "StoreCommodity{" +
                 "commodityId='" + commodityId + '\'' +
@@ -198,6 +209,7 @@ public class StoreCommodity {
                 ", commodityNum='" + commodityNum + '\'' +
                 ", commoditySurplus='" + commoditySurplus + '\'' +
                 ", commodityState=" + commodityState +
+                ", slideshowUrl='" + slideshowUrl + '\'' +
                 '}';
     }
 }

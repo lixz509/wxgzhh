@@ -64,4 +64,19 @@ public class HomeContentService {
         return json;
     }
 
+    // 根据分类查询商品
+    public String classifyCommodity(String commodityId,String sort){
+        ArrayList<StoreCommodity> storeCommodities = new ArrayList<>();
+        if(sort.equals("1")){
+            storeCommodities=CR.findByClassifyIdSales(commodityId);
+        }else if(sort.equals("2")){
+            storeCommodities=CR.findByClassifyIdPriceAsc(commodityId);
+        }else if(sort.equals("3")){
+            storeCommodities=CR.findByClassifyIdPriceDesc(commodityId);
+        }
+        String json= JSON.toJSONString(storeCommodities, SerializerFeature.DisableCircularReferenceDetect);
+        System.out.println(json);
+        return json;
+    }
+
 }

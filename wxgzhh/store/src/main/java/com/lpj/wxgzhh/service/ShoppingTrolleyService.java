@@ -74,5 +74,8 @@ public class ShoppingTrolleyService {
         STR.deleteByShoppingTrolleyId(shoppingTrolleyId);
         return json;
     }
-
+    // 根据购物车id,删除该购物车信息
+    public void deleteShoppingTrolley(String shoppingTrolleyId) {
+        STR.deleteByShoppingTrolleyId(shoppingTrolleyId);
+    }
 }

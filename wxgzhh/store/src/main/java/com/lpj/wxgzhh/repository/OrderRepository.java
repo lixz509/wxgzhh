@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 @Repository
 public interface OrderRepository  extends JpaRepository<StoreOrder, String> {
@@ -27,4 +29,14 @@ public interface OrderRepository  extends JpaRepository<StoreOrder, String> {
 
     // 根据订单id查找订单
     StoreOrder findByOrderId(String orderId);
+
+    // 根据用户id查询订单
+    ArrayList<StoreOrder> findByUserId(@Param("userId")String userId);
+
+    // 根据用户
+    @Query(value = "SELECT * from store_order WHERE user_id=:userId and order_state =:sort",nativeQuery=true)
+    ArrayList<StoreOrder> findByOrderIdAndState(@Param("userId")String userId,@Param("sort") String sort);
+
+    // 根据用户id，商品id查询订单
+    ArrayList<StoreOrder> findByUserIdAndCommodityId(@Param("userId")String userId,@Param("commodityId")String commodityId);
 }

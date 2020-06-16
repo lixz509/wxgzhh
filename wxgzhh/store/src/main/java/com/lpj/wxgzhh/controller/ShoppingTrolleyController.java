@@ -24,16 +24,25 @@ public class ShoppingTrolleyController {
     }
 
     // 前端传购物车id，数量，修改购物车商品数量
-    @PostMapping("/number")
+    @PostMapping
+    @RequestMapping("/number")
     private void saveShoppingNum(@RequestParam("shoppingTrolleyId") String shoppingTrolleyId,@RequestParam("num") String num){
         STS.shoppingTrolleyNum(shoppingTrolleyId,num);
     }
 
     // 前端传购物车id，用户id，商品id，数量，新增一个状态为未付款的订单，并将该商品从购物车列表中删除
-    @PostMapping("/order")
+    @PostMapping
+    @RequestMapping("/order")
     private String shoppingTrolleyOrder(@RequestParam("shoppingTrolleyId") String shoppingTrolleyId){
         String json=STS.savePaymentOrder(shoppingTrolleyId);
         return json;
+    }
+
+    // 根据购物车id，删除购物车信息
+    @PostMapping
+    @RequestMapping("/deleteShoppingTrolley")
+    private void deleteShoppingTrolley(@RequestParam("shoppingTrolleyId") String shoppingTrolleyId){
+        STS.deleteShoppingTrolley(shoppingTrolleyId);
     }
 
 }

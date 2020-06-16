@@ -17,16 +17,33 @@ public class OrderContentController {
     private OrderContentService OS;
 
     // 前端传订单id，用户id，将订单从未支付状态转为未发货状态
-    @PostMapping("/shipments")
+    @PostMapping
+    @RequestMapping("/shipments")
     public String shipmentsOrder(@RequestParam("userid") String userId,@RequestParam("orderId") String orderId){
         String json=OS.updateShipmentsOrder(userId,orderId);
         return json;
     }
 
     // 前端传订单id，返回订单金额
-    @PostMapping("/price")
+    @PostMapping
+    @RequestMapping("/price")
     public String orderPrice(@RequestParam("orderId") String orderId){
         String json=OS.findOrderBalance(orderId);
+        return json;
+    }
+
+    // 前端传用户id，订单状态查询所有订单信息用于订单页面展示
+    @PostMapping
+    public String onOrder(@RequestParam("userid") String userId,@RequestParam("sort")String sort){
+        String json=OS.onOrder(userId,sort);
+        return json;
+    }
+
+    // 前端传用户id，商品名，返回订单及产品信息
+    @PostMapping
+    @RequestMapping("/search")
+    public String orderSearch(@RequestParam("userid") String userId,@RequestParam("commodityName") String commodityName){
+        String json=OS.orderSearch(userId,commodityName);
         return json;
     }
 
