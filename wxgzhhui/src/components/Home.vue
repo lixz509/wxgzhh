@@ -286,7 +286,7 @@ body {
       >
         <img
           class="carouselImg"
-          v-for="(slideshow,i) in paperlist.slideShows"
+          v-for="(slideshow,i) in paperlist.slideshowUrl"
           :src="slideshow.show_url"
           @click="jumpCommodityDetails(slideshow.commodityId)"
         />
