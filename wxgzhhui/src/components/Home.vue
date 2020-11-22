@@ -183,7 +183,7 @@ body {
   position: relative;
   width: 100vw;
   height: 30vw;
-  background-color: #F5FFFA;
+  background-color: #f5fffa;
 }
 .selection img {
   height: 30vw;
@@ -322,7 +322,11 @@ body {
     </div>
     <div class="selections">
       <img class="selectionP" src="../../static/icon/selection.jpg" />
-      <div class="selection" v-for="(selection,i) in paperlist.hotSales" @click="jumpCommodityDetails(selection.commodityId)">
+      <div
+        class="selection"
+        v-for="(selection,i) in paperlist.hotSales"
+        @click="jumpCommodityDetails(selection.commodityId)"
+      >
         <img :src="selection.showUrl" />
         <div class="selectionText">{{selection.commodityName}}</div>
         <div class="selectionParticulars">
@@ -366,7 +370,7 @@ export default {
         { night: false },
         { night: false }
       ],
-      classifyId:""
+      classifyId: ""
     };
   },
   components: {
@@ -411,7 +415,9 @@ export default {
         this.balls[0].night = false;
         this.balls[4].night = true;
       }
-       this.intervalId = setInterval(()=>{this.carousel()},3000);
+      this.intervalId = setInterval(() => {
+        this.carousel();
+      }, 3000);
     },
     // 右箭头点击事件
     rigtharrows() {
@@ -425,7 +431,9 @@ export default {
         this.balls[0].night = true;
         this.balls[4].night = false;
       }
-       this.intervalId = setInterval(()=>{this.carousel()},3000);
+      this.intervalId = setInterval(() => {
+        this.carousel();
+      }, 3000);
     },
     // 小球点击事件
     balla(i) {
@@ -436,7 +444,9 @@ export default {
       }
       this.balls[i].night = true;
       // console.log(leftshift);
-      this.intervalId = setInterval(()=>{this.carousel()},3000);
+      this.intervalId = setInterval(() => {
+        this.carousel();
+      }, 3000);
     },
     // 开始触摸事件
     touchStart(ev) {
@@ -483,20 +493,30 @@ export default {
             this.balls[4].night = false;
           }
         }
-        this.intervalId = setInterval(()=>{this.carousel()},3000);
+        this.intervalId = setInterval(() => {
+          this.carousel();
+        }, 3000);
         // console.log(this.endX);
       }
     },
-    jumpClassify(classifyId,classifyName){
-      this.$router.push({name:"Classify",params:{classifyId:classifyId,classifyName:classifyName}});
+    jumpClassify(classifyId, classifyName) {
+      this.$router.push({
+        name: "Classify",
+        params: { classifyId: classifyId, classifyName: classifyName }
+      });
     },
-    jumpCommodityDetails(commodityId){
+    jumpCommodityDetails(commodityId) {
       // alert(commodityId);
-      this.$router.push({name:"CommodityDetails",params:{commodityId:commodityId}});
+      this.$router.push({
+        name: "CommodityDetails",
+        params: { commodityId: commodityId }
+      });
     }
   },
   mounted() {
-    this.intervalId = setInterval(()=>{this.carousel()},3000);
+    this.intervalId = setInterval(() => {
+      this.carousel();
+    }, 3000);
   }
 };
 </script>

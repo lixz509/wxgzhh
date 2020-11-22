@@ -123,7 +123,7 @@ body {
       </ul>
     </div>
     <div class="commodityList">
-      <div class="commodity" v-for="(commodity,i) in paperlist">
+      <div class="commodity" v-for="(commodity,i) in paperlist" @click="jumpCommodityDetails(commodity.commodityId)" >
         <img :src="commodity.showUrl" />
         <div class="commodityText">{{commodity.commodityName}}</div>
         <div class="commodityPrice">
@@ -166,6 +166,10 @@ export default {
     // 返回上一页
     retreat() {
       this.$router.go(-1);
+    },
+    // 跳转到商品详情
+    jumpCommodityDetails(commodityId){
+      this.$router.push({name:"CommodityDetails",params:{commodityId:commodityId}});
     },
     // 重新排序
     searchClassify(sort) {

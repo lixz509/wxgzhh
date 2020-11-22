@@ -20,14 +20,16 @@ import Information from "@/components/Information"
 import AboutUs from "@/components/AboutUs"
 import ChatUserInfo from "@/components/ChatUserInfo"
 import Classify from "@/components/Classify"
+import Login from "@/components/Login"
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Home0',
+      name: 'Home',
       component: Home
     },
     {
@@ -130,5 +132,27 @@ export default new Router({
       name: 'Classify',
       component: Classify
     },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    },
   ]
 })
+router.beforeEach((to, from, next) => {
+  // 1. 判断是不是登录页面
+  // 是登录页面
+  if(to.path === '/login') {
+    next(
+      alert("aa")
+    )
+  } else {
+    // 不是登录页面
+    
+    // 2. 判断 是否登录过
+    let token = localStorage.getItem('token')
+    token ? next() : next('/login')
+  }
+})
+
+export default router
