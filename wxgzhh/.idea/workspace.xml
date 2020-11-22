@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="">
+    <list default="true" id="67664c7e-b398-46d8-a132-207e5c537481" name="Default Changelist" comment="修改1">
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/src/main/java/com/lpj/wxgzhh/service/LoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/service/AccessTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/commons/src/main/java/com/lpj/wxgzhh/service/AccessTokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/service/AccessTokenManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/commons/target/classes/com/lpj/wxgzhh/service/AccessTokenManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weixin/target/classes/com/lpj/wxgzhh/controller/MessageConvertController.class" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/target/classes/com/lpj/wxgzhh/controller/MessageConvertController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weixin/target/classes/static/jl.png" beforeDir="false" afterPath="$PROJECT_DIR$/weixin/target/classes/static/jl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Address.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Address.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Balance.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Balance.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatRoom.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatUserInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/ChatUserInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Classify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Classify.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Commodity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Commodity.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/CommodityDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/CommodityDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Favorite.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Favorite.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Information.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Message.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Message.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/My.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/My.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Payment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Payment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Security.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Security.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxgzhhui/src/components/Shopping.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../wxgzhhui/src/components/Shopping.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +84,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/weixin/src/main/resources/static/store/commodity" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HuiMaoWang(1)" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,11 +104,11 @@
       <recent name="com.lpj.wxgzhh" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\commodity" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store" />
       <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\classify" />
       <recent name="E:\idea\wxgzhh\wxgzhh\store\src\main" />
-      <recent name="E:\idea\wxgzhh\wxgzhh\weixin\src\main\resources\static\store\portrait" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -267,7 +283,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -408,6 +424,12 @@
       <workItem from="1592318962129" duration="1729000" />
       <workItem from="1592325541693" duration="4685000" />
       <workItem from="1592368227224" duration="2847000" />
+      <workItem from="1592374141134" duration="2119000" />
+      <workItem from="1594004184274" duration="137000" />
+      <workItem from="1603369285856" duration="1633000" />
+      <workItem from="1603984274619" duration="25000" />
+      <workItem from="1605913951953" duration="7751000" />
+      <workItem from="1606034266556" duration="9735000" />
     </task>
     <task id="LOCAL-00001" summary="模块化">
       <created>1574821115154</created>
@@ -731,7 +753,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592327384207</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="修改1">
+      <created>1592374215334</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1592374215334</updated>
+    </task>
+    <task id="LOCAL-00048" summary="修改2">
+      <created>1592378424508</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1592378424508</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -752,8 +788,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="增加快捷的运行脚本" />
-    <MESSAGE value="增加快捷的运行脚本1" />
     <MESSAGE value="增加快捷的运行脚本2" />
     <MESSAGE value="加入其余菜单项" />
     <MESSAGE value="关闭菜单重置" />
@@ -777,97 +811,51 @@
     <MESSAGE value="添加图片" />
     <MESSAGE value="sql语句" />
     <MESSAGE value="修改为连接公众号" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改为连接公众号" />
+    <MESSAGE value="修改1" />
+    <MESSAGE value="修改2" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Notifications" timestamp="1591372476393">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1603984295257">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1591372476393" />
-    <state x="361" y="71" key="#Project_Structure" timestamp="1590058968130">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603984295257" />
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1606048188566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1590058968130" />
-    <state x="361" y="72" key="#Updates" timestamp="1590996871018">
+    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606048188566" />
+    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1606048188566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="72" key="#Updates/0.0.1536.824@0.0.1536.824" timestamp="1590996871018" />
-    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1592248884594">
+    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606048188566" />
+    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1606048188566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1592248884594" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590064157435">
+    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606048188566" />
+    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1606048188566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590064157435" />
-    <state x="372" y="6" key="CommitChangelistDialog2" timestamp="1592327382877">
+    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606048188566" />
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1606048188567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592327382877" />
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom" timestamp="1592371097394">
+    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606048188567" />
+    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1606048188567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.0.center" timestamp="1592371097394">
+    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606048188567" />
+    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1606048188567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.0.left" timestamp="1592371097394">
+    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606048188567" />
+    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1606048188567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.0.right" timestamp="1592371097394">
+    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606048188567" />
+    <state x="377" y="0" width="782" height="824" key="find.popup" timestamp="1606035898251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1126" height="236" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom" timestamp="1592371097394">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.1.center" timestamp="1592371097394">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.1.left" timestamp="1592371097394">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state width="1126" height="236" key="GridCell.Tab.1.right" timestamp="1592371097394">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1126" height="236" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592371097394" />
-    <state x="270" y="55" key="SettingsEditor" timestamp="1589904806075">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589904806075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1592327396719">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592327396719" />
-    <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1591090046861">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1591090046861" />
-    <state x="93" y="93" width="1350" height="638" key="dock-window-2" timestamp="1591090046861">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1591090046861" />
-    <state x="487" y="204" key="git4idea.merge.GitPullDialog" timestamp="1592327389527">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="487" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1592327389527" />
-    <state x="178" y="107" key="new project wizard" timestamp="1589963992943">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="178" y="107" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1589963992943" />
-    <state x="511" y="40" key="refactoring.ChangeSignatureDialog" timestamp="1590160143270">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="511" y="40" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1590160143270" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1592246906665">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1592246906665" />
+    <state x="377" y="0" width="782" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606035898251" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
