@@ -144,7 +144,7 @@ router.beforeEach((to, from, next) => {
   // 是登录页面
   if(to.path === '/login') {
     next(
-      alert("aa")
+      
     )
   } else {
     // 不是登录页面
